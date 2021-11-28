@@ -15,10 +15,18 @@ export default function App() {
     return(
 <NavigationContainer independent={true}>
   <Stack.Navigator>
-    <Stack.Screen name="Login" component={Login}/>
-    <Stack.Screen name="Home" component={HomeScreen}/>
+    <Stack.Screen name="Login" component={Login} options={{
+          headerTintColor:"white",
+          headerStyle:{backgroundColor: "rgb(96, 112, 128)"},
+          }}/>
+    <Stack.Screen name="Home" component={HomeScreen} options={{
+          headerStyle:{backgroundColor: "rgb(96, 112, 128)"},
+          headerTintColor:"white",
+          }}/>
   </Stack.Navigator>
 </NavigationContainer>
 
     )
+    
 }
+

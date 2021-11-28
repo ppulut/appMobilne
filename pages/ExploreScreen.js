@@ -22,11 +22,11 @@ function Menu({ navigation }) {
               textAlign: 'center',
               marginBottom: 16,
             }}>
-            Explore Screen
+            Menu Screen
           </Text>
           <Button
             onPress={() => navigation.navigate('Home')}
-            title="Go to home"
+            title="Back to Home"
           />
         
         </View>

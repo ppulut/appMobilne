@@ -2,7 +2,7 @@
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
 import * as React from 'react';
-import {Button, View, Text, TextInput, SafeAreaView} from 'react-native';
+import {Button, View, StyleSheet, TextInput, SafeAreaView} from 'react-native';
 import HomeScreen from './HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -12,7 +12,7 @@ function Login({ navigation }) {
     
   return (
     <SafeAreaView style={{flex: 1}} name="Login">
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={styles.tlo}>
       <TextInput style={{fontSize: 18, textAlign: 'center', color: 'grey'}}
       mx="3"
       placeholder="Login"
@@ -39,6 +39,16 @@ function Login({ navigation }) {
     </SafeAreaView>
   );
 }
-
+const styles = StyleSheet.create({
+  tlo: {
+      backgroundColor: 'rgb(247, 247, 247)',
+      fontSize: 15,
+      flex: 1, 
+      alignItems: 'center', 
+      justifyContent: 'center',
+      navbarBackgroundColor: '#2c3e50',
+      statusBarColor: '#233240'
+    },
+});
 
 export default Login;
