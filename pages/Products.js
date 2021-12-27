@@ -14,15 +14,13 @@ import { mdiShoppingSearch } from '@mdi/js';
 function Products({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-       <Icon path={mdiShoppingSearch}
-        size={1}
-        color="red" />
+  
         
-        <TextInput style={{fontSize: 18, textAlign: 'center', color: 'grey'}} placeholder="Szukaj"
-
+        <TextInput style={styles.inputy} placeholder="Szukaj" />
+        <Icon path={mdiShoppingSearch}
+          size={1}
+          color="red" />
       
-    />
-
       <Button
             onPress={() => navigation.navigate('Menu')}
             title="Szukaj"
@@ -32,6 +30,18 @@ function Products({ navigation }) {
 }
 
 const styles = StyleSheet.create({
+  
+  inputy: {
+    fontSize: 18, 
+    textAlign: 'center', 
+    color: 'grey',
+    mx: 6,
+    borderWidth: 1,
+    borderColor: 'rgb(111, 121, 247)',
+    padding: 5,
+    marginTop: 10
+  },
+
   button: {
     alignItems: 'center',
     justifyContent: 'center',

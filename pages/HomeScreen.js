@@ -2,29 +2,40 @@
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
 import * as React from 'react';
-import {Button, View, StyleSheet, TextInput} from 'react-native';
+import {Text, View, StyleSheet, TextInput, TouchableOpacity, Animated} from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Menu from './ExploreScreen'
 import Products from './Products'
-import { mdiDotsHorizontalCircleOutline, mdiHomeOutline } from '@mdi/js';
+import { mdiDotsHorizontalCircleOutline, mdiHomeOutline, mdiHomeVariant, mdiTranslate } from '@mdi/js';
 import { mdiPackageVariant } from '@mdi/js';
 import Icon from '@mdi/react'
+
 
 function Home({ navigation }) {
   return (
     <View style={styles.tlo} >
       
 
-      <Button
+      <TouchableOpacity
+            style = {styles.butony}
             onPress={() => navigation.navigate('Menu')}
-            title="Menu"
-          />
+          >
+          <Text>Menu</Text>
+          </TouchableOpacity>
     </View>
   );
 }
 
+function HomeStack() {
+  return (
+<Drawer.Navigator>
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Produkty" component={Products} />
+      </Drawer.Navigator>
+  )
+}
 
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
@@ -35,22 +46,25 @@ const Tab = createBottomTabNavigator();
       return(
     
       <Tab.Navigator>
-        <Tab.Screen  name="Home" component={Home} options={{
+        <Tab.Screen  name="Home" component={HomeStack} options={{
                         tabBarIcon: ({ color, size }) => (
                             <Icon path={mdiHomeOutline} 
                             color="rgb(96, 112, 128)"/>
                         ),
                         
-          }}/>
+          }}
+          />
         <Tab.Screen name="Menu" component={Menu} options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon path={mdiDotsHorizontalCircleOutline} color="rgb(96, 112, 128)"/>
+                            <Icon path={mdiDotsHorizontalCircleOutline} 
+                            color="rgb(96, 112, 128)"/>
                         ),
           }}/>
 
         <Tab.Screen name="Produkty" component={Products} options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon path={mdiPackageVariant} color="rgb(96, 112, 128)"/>
+                            <Icon path={mdiPackageVariant} 
+                            color="rgb(96, 112, 128)"/>
                         ),
           }}/>
 
@@ -68,6 +82,17 @@ const styles = StyleSheet.create({
       navbarBackgroundColor: '#2c3e50',
       statusBarColor: '#233240'
     },
+
+    butony: {
+      marginTop: 12,
+      paddingVertical: 12,
+      paddingHorizontal: 32,
+      borderRadius: 4,
+      elevation: 3,
+      backgroundColor: 'rgb(96, 112, 128)',
+      color: 'rgb(50, 168, 82)',
+    }
+
 });
 
 export default HomeScreen;
