@@ -23,7 +23,7 @@ function AddProduct({ navigation }) {
       <Image
             source={{
               uri:
-                'https://raw.githubusercontent.com/ppulut/appMobilne/69f4133fa4c427223c5a3a797b33339dd07872ea/icons/phone-outline.svg',
+                'https://raw.githubusercontent.com/ppulut/appMobilne/3b2b9681aced2955c3e1d4823341bc9b3b4d142c/icons/name.svg',
             }}
             style={styles.imageStyle}
           />    
@@ -50,7 +50,7 @@ function AddProduct({ navigation }) {
       <Image
             source={{
               uri:
-                'https://raw.githubusercontent.com/AboutReact/sampleresource/master/input_phone.png',
+                'https://raw.githubusercontent.com/ppulut/appMobilne/3b2b9681aced2955c3e1d4823341bc9b3b4d142c/icons/description.svg',
             }}
             style={styles.imageStyle}
           />
@@ -99,7 +99,7 @@ function AddProduct({ navigation }) {
 
 
 const styles = StyleSheet.create({
-  tlo: {
+  /*tlo: {
       backgroundColor: 'rgb(247, 247, 247)',
       fontSize: 15,
       flex: 1, 
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       navbarBackgroundColor: '#2c3e50',
       statusBarColor: '#233240'
-    },
+    },*/
 
     sectionStyle: {
       flexDirection: 'row',
