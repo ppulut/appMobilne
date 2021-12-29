@@ -2,7 +2,7 @@
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
 import * as React from 'react';
-import {Text, TouchableOpacity, Button, View, StyleSheet, TextInput, SafeAreaView} from 'react-native';
+import {Text, Image, View, StyleSheet, TextInput, SafeAreaView, TouchableOpacity} from 'react-native';
 import HomeScreen from './HomeScreen';
 import { NavigationContainer } from '@react-navigation/native';
 
@@ -28,12 +28,12 @@ function Login({ navigation }) {
       <Image
             source={{
               uri:
-                'https://raw.githubusercontent.com/ppulut/appMobilne/3b2b9681aced2955c3e1d4823341bc9b3b4d142c/icons/name.svg',
+                'https://raw.githubusercontent.com/ppulut/appMobilne/750404e5f9b569d4008cd5694a89c3ebc0c407d1/icons/login.svg',
             }}
             style={styles.imageStyle}
           />    
       <TextInput
-        placeholder="Nazwa"
+        placeholder="Login"
     />
     </View>
 
@@ -41,12 +41,13 @@ function Login({ navigation }) {
       <Image
             source={{
               uri:
-                'https://raw.githubusercontent.com/ppulut/appMobilne/a99cdf037a5f16e3563edfe9b83b44df80ba5284/icons/money.svg',
+                'https://raw.githubusercontent.com/ppulut/appMobilne/750404e5f9b569d4008cd5694a89c3ebc0c407d1/icons/password.svg',
             }}
             style={styles.imageStyle}
           />
       <TextInput
-        placeholder="Cena"
+      secureTextEntry="true"
+        placeholder="Hasło"
     />
     </View>
 
