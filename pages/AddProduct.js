@@ -63,8 +63,7 @@ function AddProduct({ navigation }) {
       <Image
             source={{
               uri:
-                'https://raw.githubusercontent.com/AboutReact/sampleresource/master/input_phone.png',
-            }}
+              'https://raw.githubusercontent.com/ppulut/appMobilne/26db86ea6b900aefa993be8d0eef0ac297cdbcde/icons/localisation.svg'            }}
             style={styles.imageStyle}
           />
       <TextInput
