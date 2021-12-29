@@ -9,7 +9,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Menu from './ExploreScreen'
 import Products from './Products'
 import AddProduct from './AddProduct';
-import Favorite from './ExploreScreen';
+import Favorite from './Favorite';
 import { mdiHeartOutline , mdiPlusCircleOutline, mdiDotsHorizontalCircleOutline, mdiHomeOutline, mdiPackageVariant, mdiHomeVariant, mdiTranslate } from '@mdi/js';
 import Icon from '@mdi/react'
 
@@ -23,7 +23,7 @@ function Home({ navigation }) {
             style = {styles.butony}
             onPress={() => navigation.navigate('Menu')}
           >
-          <Text>Menu</Text>
+          <Text style={styles.textStyle}>Menu</Text>
           </TouchableOpacity>
     </View>
   );
@@ -108,6 +108,11 @@ const styles = StyleSheet.create({
       elevation: 3,
       backgroundColor: 'rgb(96, 112, 128)',
       color: 'rgb(50, 168, 82)',
+    },
+
+    textStyle:{
+      fontSize: 25,
+      color: 'rgb(167, 219, 214)',
     }
 
 });

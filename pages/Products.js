@@ -1,43 +1,56 @@
 // React Navigate Drawer with Bottom Tab
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
-import * as React from 'react';
-import {Button, View, StyleSheet, TextInput} from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import * as React  from 'react';
+import {Image, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
 
 
 function Products({ navigation }) {
   return (
-    <View style={styles.sectionStyle}>
-  
-        
-        <TextInput style={styles.inputy} placeholder="Szukaj" />
-        <Icon path={mdiShoppingSearch}
-          size={1}
-          color="red" />
+
+<SafeAreaView style={{flex: 1}} name="AddProduct">
+      <View style={styles.sectionStyle,{flex: 1, padding: 16, alignItems: 'center',
+            justifyContent: 'center',}}>
       
-      <Button
-            onPress={() => navigation.navigate('Menu')}
-            title="Szukaj"
-          />
+          <Text
+            style={{
+              fontSize: 25,
+              textAlign: 'bottom',
+              marginBottom: 16,
+            }}>
+            Szukaj produktu
+          </Text>
+
+    <View style={styles.sectionStyle}>
+      <Image
+            source={{
+              uri:
+                'https://raw.githubusercontent.com/ppulut/appMobilne/42dde19828377f0d5b4a781b4d654201b61702dd/icons/shopping-search.svg',
+            }}
+            style={styles.imageStyle}
+          />    
+      <TextInput
+        placeholder="Szukaj"
+    />
     </View>
+
+        <TouchableOpacity
+            //onPress={() => navigation.navigate('Menu')}
+            title="Szukaj"
+            style={styles.butony}
+            >
+            <Text style={styles.textStyle}>Szukaj</Text>
+            </TouchableOpacity>
+        
+        </View>
+    
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   
-  inputy: {
-    fontSize: 18, 
-    textAlign: 'center', 
-    color: 'grey',
-    mx: 6,
-    borderWidth: 1,
-    borderColor: 'rgb(111, 121, 247)',
-    padding: 5,
-    marginTop: 10
-  },
+ 
 
   sectionStyle: {
     flexDirection: 'row',
@@ -46,7 +59,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     borderWidth: 0.5,
     borderColor: '#000',
-    height: 40,
+    height: 5,
     borderRadius: 5,
     margin: 10,
     flex: 1, 
@@ -85,6 +98,11 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
     alignItems: 'center',
   },
+
+  textStyle:{
+    fontSize: 25,
+    color: 'rgb(167, 219, 214)',
+  }
 });
 
 export default Products;

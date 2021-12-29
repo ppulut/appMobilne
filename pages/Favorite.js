@@ -3,12 +3,11 @@
 
 import * as React  from 'react';
 import {Button, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
-import HomeScreen from './HomeScreen'
 
 
 function AddProduct({ navigation }) {
   return (
-    <SafeAreaView style={{flex: 1}} name="AddProduct">
+    <SafeAreaView style={{flex: 1}} name="Ulubione">
       <View style={{flex: 1, padding: 16}}>
         <View
           style={{
@@ -22,32 +21,9 @@ function AddProduct({ navigation }) {
               textAlign: 'bottom',
               marginBottom: 16,
             }}>
-            Dodaj produkt
+            Lista ulubionych produktów
           </Text>
         
-      <TextInput style={styles.inputy}
-        placeholder="Nazwa"
-    />
-      <TextInput style={styles.inputy}
-        placeholder="Cena"
-    />
-      <TextInput style={styles.inputy}
-        placeholder="Opis"
-    />
-      <TextInput style={styles.inputy}
-        placeholder="Lokalizacja"
-    />
-          <TextInput style={styles.inputy}
-        placeholder="Nr telefonu do kontaktu"
-    />
-
-
-
-          <Button
-            //onPress={() => navigation.navigate('Home')}
-            title="Dodaj"
-            style={styles.butony}
-          />
         
         </View>
       </View>
@@ -89,6 +65,11 @@ const styles = StyleSheet.create({
       elevation: 3,
       backgroundColor: 'rgb(96, 112, 128)',
       color: 'rgb(50, 168, 82)',
+    },
+
+    textStyle:{
+      fontSize: 25,
+      color: 'rgb(167, 219, 214)',
     }
 
 });

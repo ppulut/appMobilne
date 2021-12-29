@@ -84,11 +84,12 @@ function AddProduct({ navigation }) {
     />
     </View>
 
-          <Button
-            //onPress={() => navigation.navigate('Home')}
-            title="Dodaj"
-            style={styles.butony}
-          />
+    <TouchableOpacity
+          //onPress={() => navigation.navigate('Home')}  
+          style={styles.butony}
+      >
+        <Text style={styles.textStyle}>Dodaj</Text>
+      </TouchableOpacity>
         
         </View>
     
@@ -154,6 +155,11 @@ const styles = StyleSheet.create({
       resizeMode: 'stretch',
       alignItems: 'center',
     },
+
+    textStyle:{
+      fontSize: 25,
+      color: 'rgb(167, 219, 214)',
+    }
 });
 
 export default AddProduct;
