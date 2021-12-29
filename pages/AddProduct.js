@@ -23,7 +23,7 @@ function AddProduct({ navigation }) {
       <Image
             source={{
               uri:
-                'https://raw.githubusercontent.com/AboutReact/sampleresource/master/input_phone.png',
+                'https://raw.githubusercontent.com/ppulut/appMobilne/69f4133fa4c427223c5a3a797b33339dd07872ea/icons/phone-outline.svg',
             }}
             style={styles.imageStyle}
           />    
@@ -76,7 +76,7 @@ function AddProduct({ navigation }) {
       <Image
             source={{
               uri:
-                'https://raw.githubusercontent.com/AboutReact/sampleresource/master/input_phone.png',
+              'https://raw.githubusercontent.com/ppulut/appMobilne/69f4133fa4c427223c5a3a797b33339dd07872ea/icons/phone-outline.svg',
             }}
             style={styles.imageStyle}
           />
