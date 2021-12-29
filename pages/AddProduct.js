@@ -36,7 +36,7 @@ function AddProduct({ navigation }) {
       <Image
             source={{
               uri:
-                'https://raw.githubusercontent.com/AboutReact/sampleresource/master/input_phone.png',
+                'https://raw.githubusercontent.com/ppulut/appMobilne/a99cdf037a5f16e3563edfe9b83b44df80ba5284/icons/money.svg',
             }}
             style={styles.imageStyle}
           />
