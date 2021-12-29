@@ -8,8 +8,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Menu from './ExploreScreen'
 import Products from './Products'
-import { mdiDotsHorizontalCircleOutline, mdiHomeOutline, mdiHomeVariant, mdiTranslate } from '@mdi/js';
-import { mdiPackageVariant } from '@mdi/js';
+import AddProduct from './AddProduct';
+import Favorite from './ExploreScreen';
+import { mdiHeartOutline , mdiPlusCircleOutline, mdiDotsHorizontalCircleOutline, mdiHomeOutline, mdiPackageVariant, mdiHomeVariant, mdiTranslate } from '@mdi/js';
 import Icon from '@mdi/react'
 
 
@@ -54,6 +55,20 @@ const Tab = createBottomTabNavigator();
                         
           }}
           />
+        <Tab.Screen name="Ulubione" component={Favorite} options={{
+                        tabBarIcon: ({ color, size }) => (
+                            <Icon path={mdiHeartOutline } 
+                            color="rgb(96, 112, 128)"/>
+                        ),
+          }}/>
+        
+        <Tab.Screen name="Dodaj" component={AddProduct} options={{
+                        tabBarIcon: ({ color, size }) => (
+                            <Icon path={mdiPlusCircleOutline} 
+                            color="rgb(96, 112, 128)"/>
+                        ),
+          }}/>
+
         <Tab.Screen name="Menu" component={Menu} options={{
                         tabBarIcon: ({ color, size }) => (
                             <Icon path={mdiDotsHorizontalCircleOutline} 
@@ -67,6 +82,8 @@ const Tab = createBottomTabNavigator();
                             color="rgb(96, 112, 128)"/>
                         ),
           }}/>
+
+
 
       </Tab.Navigator>
   

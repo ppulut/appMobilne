@@ -6,9 +6,9 @@ import {Button, View, Text, SafeAreaView} from 'react-native';
 import HomeScreen from './HomeScreen'
 
 
-function Menu({ navigation }) {
+function Favorite({ navigation }) {
   return (
-    <SafeAreaView style={{flex: 1}} name="Menu">
+    <SafeAreaView style={{flex: 1}} name="Ulubione">
       <View style={{flex: 1, padding: 16}}>
         <View
           style={{
@@ -36,4 +36,4 @@ function Menu({ navigation }) {
   );
 };
 
-export default Menu;
+export default Favorite;
