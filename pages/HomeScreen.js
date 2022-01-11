@@ -12,12 +12,20 @@ import AddProduct from './AddProduct';
 import Favorite from './Favorite';
 import { mdiHeartOutline , mdiPlusCircleOutline, mdiDotsHorizontalCircleOutline, mdiHomeOutline, mdiPackageVariant, mdiHomeVariant, mdiTranslate } from '@mdi/js';
 import Icon from '@mdi/react'
+import Login from './Login';
 
 
 function Home({ navigation }) {
   return (
     <View style={styles.tlo} >
-      
+    <Text
+        style={{
+            fontSize: 25,
+            textAlign: 'bottom',
+            marginBottom: 16,
+              }}>
+             xdddd
+    </Text>
 
       <TouchableOpacity
             style = {styles.butony}
