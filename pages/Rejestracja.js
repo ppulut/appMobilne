@@ -46,7 +46,11 @@ function Rejestracja({ navigation }) {
                     />
                     <TextInput
                         secureTextEntry="true"
+<<<<<<< HEAD
                         placeholder="HasÅ‚o"
+=======
+                        placeholder="Has³o"
+>>>>>>> 8ac24a9614f21e9b7a6c40b8d063395fb092415c
                     />
                 </View>
                 {/*powtorzone haslo*/}
@@ -60,7 +64,11 @@ function Rejestracja({ navigation }) {
                     />
                     <TextInput
                         secureTextEntry="true"
+<<<<<<< HEAD
                         placeholder="PowtÃ³rz hasÅ‚o"
+=======
+                        placeholder="Powtórz has³o"
+>>>>>>> 8ac24a9614f21e9b7a6c40b8d063395fb092415c
                     />
                 </View>
                 {/*Imie */}
