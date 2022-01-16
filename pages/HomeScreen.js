@@ -27,11 +27,7 @@ function Home({ navigation }) {
             textAlign: 'bottom',
             marginBottom: 16,
               }}>
-<<<<<<< HEAD
              Witaj
-=======
-             xdddd
->>>>>>> 8ac24a9614f21e9b7a6c40b8d063395fb092415c
     </Text>
 
       <TouchableOpacity
