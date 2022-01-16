@@ -3,21 +3,32 @@
 
 import * as React from 'react';
 import {Text, View, StyleSheet, TextInput, TouchableOpacity, Animated} from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator,  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem, } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Menu from './ExploreScreen'
 import Products from './Products'
 import AddProduct from './AddProduct';
 import Favorite from './Favorite';
+import About from './Authors';
 import { mdiHeartOutline , mdiPlusCircleOutline, mdiDotsHorizontalCircleOutline, mdiHomeOutline, mdiPackageVariant, mdiHomeVariant, mdiTranslate } from '@mdi/js';
 import Icon from '@mdi/react'
+import Login from './Login';
 
 
 function Home({ navigation }) {
   return (
     <View style={styles.tlo} >
-      
+    <Text
+        style={{
+            fontSize: 25,
+            textAlign: 'bottom',
+            marginBottom: 16,
+              }}>
+             Witaj
+    </Text>
 
       <TouchableOpacity
             style = {styles.butony}
@@ -29,11 +40,22 @@ function Home({ navigation }) {
   );
 }
 
+
+function CustomDrawerContent(props) {
+  return (
+    <DrawerContentScrollView {...props}>
+      <DrawerItemList {...props} />
+      <DrawerItem label="Kontakt z działem wsparcia" 
+      onPress={() => alert('kontakt@poczta.pl')} />
+    </DrawerContentScrollView>
+  );
+}
 function HomeStack() {
   return (
-<Drawer.Navigator>
+<Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
         <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="Produkty" component={Products} />
+        <Drawer.Screen name="Autorzy" component={About} 
+        style= {{backgroundColor:'rgb(252, 107, 3)'}} />
       </Drawer.Navigator>
   )
 }

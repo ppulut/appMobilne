@@ -17,7 +17,7 @@ function Products({ navigation }) {
               textAlign: 'bottom',
               marginBottom: 16,
             }}>
-            Dodaj produkt
+            Szukaj produktu
           </Text>
 
     <View style={styles.sectionStyle}>

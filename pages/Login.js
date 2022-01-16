@@ -4,12 +4,11 @@
 import * as React from 'react';
 import {Text, Image, View, StyleSheet, TextInput, SafeAreaView, TouchableOpacity} from 'react-native';
 import HomeScreen from './HomeScreen';
+import Rejestracja from './Rejestracja';
 import { NavigationContainer } from '@react-navigation/native';
 
 
-function Login({ navigation }) {
-
-    
+function Login({ navigation }) {       
   return (
     <SafeAreaView style={{flex: 1}} name="Login">
       <View style={styles.sectionStyle,{flex: 1, padding: 16, alignItems: 'center',
@@ -23,7 +22,7 @@ function Login({ navigation }) {
             }}>
             Logowanie
           </Text>
-
+    {/*login*/ }
     <View style={styles.sectionStyle}>
       <Image
             source={{
@@ -33,10 +32,11 @@ function Login({ navigation }) {
             style={styles.imageStyle}
           />    
       <TextInput
-        placeholder="Login"
+            placeholder="Login"
+           
     />
     </View>
-
+    {/*haslo*/}
     <View style={styles.sectionStyle}>
       <Image
             source={{
@@ -56,8 +56,16 @@ function Login({ navigation }) {
           style={styles.butony}
       >
         <Text style={styles.textStyle}>Zaloguj</Text>
-      </TouchableOpacity>
-    </View>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+            onPress={() => navigation.navigate('Rejestracja')}
+            style={styles.butony}
+        >
+            <Text style={styles.textStyle}>Rejestracja</Text>
+        </TouchableOpacity>
+          </View>
+
     </SafeAreaView>
   );
 }
@@ -91,13 +99,14 @@ const styles = StyleSheet.create({
     },
 
     butony: {
-      marginTop: 12,
-      paddingVertical: 12,
-      paddingHorizontal: 32,
+     marginTop: 12,
+     paddingVertical: 12,
+        minWidth: '25%',
       borderRadius: 4,
       elevation: 3,
       backgroundColor: 'rgb(96, 112, 128)',
-      color: 'rgb(50, 168, 82)',
+        color: 'rgb(50, 168, 82)',
+        textAlign: 'center',
     },
 
     imageStyle: {
@@ -113,7 +122,6 @@ const styles = StyleSheet.create({
       fontSize: 25,
       color: 'rgb(167, 219, 214)',
     }
-
 });
 
 export default Login;

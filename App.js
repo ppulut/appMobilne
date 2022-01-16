@@ -5,6 +5,7 @@ import { Root } from 'native-base';
 import AppContainer from './pages/Login';
 import Login from './pages/Login';
 import HomeScreen from './pages/HomeScreen';
+import Rejestracja from './pages/Rejestracja';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -23,6 +24,10 @@ export default function App() {
           headerStyle:{backgroundColor: "rgb(96, 112, 128)"},
           headerTintColor:"white",
           }}/>
+    <Stack.Screen name="Rejestracja" component={Rejestracja} options={{
+        headerStyle: { backgroundColor: "rgb(96, 112, 128)" },
+        headerTintColor: "white",
+    }} />
   </Stack.Navigator>
 </NavigationContainer>
 
