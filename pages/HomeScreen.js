@@ -27,7 +27,7 @@ function Home({ navigation }) {
             textAlign: 'bottom',
             marginBottom: 16,
               }}>
-             Witaj
+             Witaj !
     </Text>
 
       <TouchableOpacity

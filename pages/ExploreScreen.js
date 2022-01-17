@@ -1,72 +1,117 @@
-// React Navigate Drawer with Bottom Tab
-// https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { StyleSheet, Dimensions } from 'react-native';
+import {Box,Image,Text,NativeBaseProvider,View,} from "native-base"
+import { FlatList, ScrollView } from 'react-native-gesture-handler';
 
-import * as React  from 'react';
-import {View, StyleSheet, Text, SafeAreaView, TouchableOpacity} from 'react-native';
-import HomeScreen from './HomeScreen'
+
+function Menu() {
+  const [data, setData] = useState('');
+
+  const getData = async () => {
+      axios.get("http://localhost:3000/produkty")
+      .then((response) => {
+        setData(response.data);
+      })
+ };
+
+ useEffect(async () => getData(),[]);
 
 
-function Menu({ navigation }) {
-  return (
-    <SafeAreaView style={{flex: 1}} name="Menu">
-      <View style={{flex: 1, padding: 16}}>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+
+const displayDatas = ({item}) => {
+
+  return(
+    <View style={styles.boxy}>
+      
+     <Box>
+      <Text
+            fontSize = "16"
+            color = "rgb(111,111,111)"
+            fontWeight="bold"
+          > 
+          {item.nazwa}
+         </Text>
+
           <Text
-            style={{
-              fontSize: 25,
-              textAlign: 'center',
-              marginBottom: 16,
-            }}>
-            Menu Screen
+            fontSize = "14"
+            color = "rgb(111,111,111)"
+          >Cena: {item.cena}zł
           </Text>
-          
-          <TouchableOpacity
-            style = {styles.butony}
-            onPress={() => navigation.navigate('Home')}
-          >
-          <Text style={styles.textStyle}>Powrót</Text>
-          </TouchableOpacity>
-        
-        </View>
+
+          <Text
+            fontSize = "14"
+            color = "rgb(111,111,111)"
+            
+          > 
+          Lokalizacja: {item.lokalizacja}
+         </Text>
+
+        <Text fontWeight="400" color = "rgb(111,111,111)" >
+          {item.opis}
+        </Text>
+       </Box>
+
+       <Box>
+          <Image
+            source={{
+              uri: item.Photo,
+            }}
+            alt="Photo"
+            style={styles.responsiveImage}
+          />
+      </Box>
       </View>
-    </SafeAreaView>
-    
-  );
-};
+   
+  )
+}
+
+return (
+  <NativeBaseProvider>
+        <View style={styles.container}>
+          <FlatList
+              data={data}
+              renderItem={displayDatas}
+          />
+          </View>
+  </NativeBaseProvider>
+)
+}
 
 const styles = StyleSheet.create({
-  tlo: {
-      backgroundColor: 'rgb(247, 247, 247)',
-      fontSize: 15,
-      flex: 1, 
-      alignItems: 'center', 
-      justifyContent: 'center',
-      navbarBackgroundColor: '#2c3e50',
-      statusBarColor: '#233240'
-    },
 
-    butony: {
-      marginTop: 12,
-      paddingVertical: 12,
-      paddingHorizontal: 32,
-      borderRadius: 4,
-      elevation: 3,
-      backgroundColor: 'rgb(96, 112, 128)',
-      color: 'rgb(50, 168, 82)',
-    },
+  responsiveImage: {
+    width: '100%',
+    height: 'auto',
+    aspectRatio: 20/10,    
+    paddingLeft:10,
+  },
+  
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingTop: 15,
+    paddingHorizontal: 15,
+    alignItems: 'center', 
+    justifyContent: 'center',
+    flexDirection: 'column',
+    
+  },
 
-    textStyle:{
-      color: 'rgb(247, 247, 247)',
-      fontSize: 20,
-    }
+  boxy: {
+  marginRight: 40,
+  marginLeft: 40,
+  marginTop: 10,
+  paddingTop: 20,
+  paddingBottom: 20,
+  borderRadius: 10,
+  borderWidth: 1,
+  height:'auto',
+  borderColor: '#68a0cf',
+  backgroundColor: 'rgb(247,247,247)',
+
+
+  }
 
 });
-
-
 export default Menu;
-

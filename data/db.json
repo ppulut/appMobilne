@@ -1,0 +1,50 @@
+{
+    "produkty": [
+        {
+          "id": "1",
+          "nazwa": "Samochód Renault Clio",
+          "cena": "8000",
+          "lokalizacja": "Kielce",
+          "opis": "Sprzedam Reno; pali, jeździ, wszystko sprawne",
+          "Photo": "https://ocdn.eu/rankings-content-transforms/1/mlDk9ktY2FyQ2F0YWxvZ3VlLzdhZTJmNWQ2ODY5ZGE4MzJhOTNmOTk5Y2U0Y2FiYjUzkpUDAMzpzQ2zzQe0kwXNAwfNAaKCoTABoTEA"
+        },
+
+        {
+          "id": "2",
+          "nazwa": "GTX 1060 6GB",
+          "cena": "1000",
+          "lokalizacja": "Kraków",
+          "opis": "Mam do sprzedania kartę graficzną Gigabyte GTX 1060 6GB ",
+          "Photo": "https://images.morele.net/i1064/974808_1_i1064.png"
+        },
+
+        {
+          "id": "3",
+          "nazwa": "Rower MTB Superior XP 909",
+          "cena": "4700",
+          "lokalizacja": "Kielce",
+          "opis": "Sprzedam rower",
+          "Photo": "https://www.dadelo.pl/photo/product/superior-xp-909-2-144549-f-sk6-w1550-h1080.png"
+        },
+
+        {
+          "id": "4",
+          "nazwa": "Książka Kosiarze Neal Shusterman",
+          "cena": "25",
+          "lokalizacja": "Sandomierz",
+          "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
+          "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
+        },
+        {
+          "id": "5",
+          "nazwa": "Smartband",
+          "cena": "70",
+          "lokalizacja": "Lublin",
+          "opis": "Sprzedam używany smartband",
+          "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
+        }
+        ]
+    }
+    
+    
+    
