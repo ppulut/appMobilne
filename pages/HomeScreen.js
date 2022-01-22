@@ -2,7 +2,7 @@
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
 import * as React from 'react';
-import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import { createDrawerNavigator,  DrawerContentScrollView,
   DrawerItemList,
   DrawerItem, } from '@react-navigation/drawer';
@@ -12,8 +12,7 @@ import Products from './Products'
 import AddProduct from './AddProduct';
 import Favorite from './Favorite';
 import About from './Authors';
-import { mdiHeartOutline , mdiPlusCircleOutline, mdiDotsHorizontalCircleOutline, mdiHomeOutline, mdiPackageVariant, mdiHomeVariant, mdiTranslate } from '@mdi/js';
-import Icon from '@mdi/react'
+
 
 
 
@@ -70,8 +69,12 @@ const Tab = createBottomTabNavigator();
       <Tab.Navigator>
         <Tab.Screen  name="Home" component={HomeStack} options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon path={mdiHomeOutline} 
-                            color="rgb(96, 112, 128)"/>
+                          <Image
+                          source={{
+                            uri:
+                            'https://raw.githubusercontent.com/ppulut/appMobilne/26db86ea6b900aefa993be8d0eef0ac297cdbcde/icons/localisation.svg'            }}
+                          style={styles.imageStyle}
+                        />
                         ),
                         
           }}

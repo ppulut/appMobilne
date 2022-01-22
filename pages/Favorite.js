@@ -1,5 +1,3 @@
-// React Navigate Drawer with Bottom Tab
-// https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
 import * as React  from 'react';
 import {Button, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
