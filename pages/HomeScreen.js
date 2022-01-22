@@ -2,11 +2,10 @@
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
 import * as React from 'react';
-import {Text, View, StyleSheet, TextInput, TouchableOpacity, Animated} from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import { createDrawerNavigator,  DrawerContentScrollView,
   DrawerItemList,
   DrawerItem, } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Menu from './ExploreScreen'
 import Products from './Products'
@@ -15,7 +14,7 @@ import Favorite from './Favorite';
 import About from './Authors';
 import { mdiHeartOutline , mdiPlusCircleOutline, mdiDotsHorizontalCircleOutline, mdiHomeOutline, mdiPackageVariant, mdiHomeVariant, mdiTranslate } from '@mdi/js';
 import Icon from '@mdi/react'
-import Login from './Login';
+
 
 
 function Home({ navigation }) {
@@ -24,7 +23,7 @@ function Home({ navigation }) {
     <Text
         style={{
             fontSize: 25,
-            textAlign: 'bottom',
+            textAlign: 'center',
             marginBottom: 16,
               }}>
              Witaj !
@@ -34,7 +33,7 @@ function Home({ navigation }) {
             style = {styles.butony}
             onPress={() => navigation.navigate('Menu')}
           >
-          <Text style={styles.textStyle}>Menu</Text>
+          <Text style={styles.textStyle}>Pokaż oferty</Text>
           </TouchableOpacity>
     </View>
   );
@@ -77,6 +76,13 @@ const Tab = createBottomTabNavigator();
                         
           }}
           />
+
+        <Tab.Screen name="Menu" component={Menu} options={{
+                        tabBarIcon: ({ color, size }) => (
+                            <Icon path={mdiDotsHorizontalCircleOutline} 
+                            color="rgb(96, 112, 128)"/>
+                        ),
+          }}/>
         <Tab.Screen name="Ulubione" component={Favorite} options={{
                         tabBarIcon: ({ color, size }) => (
                             <Icon path={mdiHeartOutline } 
@@ -91,12 +97,6 @@ const Tab = createBottomTabNavigator();
                         ),
           }}/>
 
-        <Tab.Screen name="Menu" component={Menu} options={{
-                        tabBarIcon: ({ color, size }) => (
-                            <Icon path={mdiDotsHorizontalCircleOutline} 
-                            color="rgb(96, 112, 128)"/>
-                        ),
-          }}/>
 
         <Tab.Screen name="Produkty" component={Products} options={{
                         tabBarIcon: ({ color, size }) => (
@@ -115,8 +115,6 @@ const styles = StyleSheet.create({
       flex: 1, 
       alignItems: 'center', 
       justifyContent: 'center',
-      navbarBackgroundColor: '#2c3e50',
-      statusBarColor: '#233240'
     },
 
     butony: {
@@ -132,6 +130,7 @@ const styles = StyleSheet.create({
     textStyle:{
       fontSize: 25,
       color: 'rgb(167, 219, 214)',
+      
     }
 
 });

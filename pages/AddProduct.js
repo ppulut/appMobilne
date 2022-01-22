@@ -2,7 +2,7 @@
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
 import * as React  from 'react';
-import {Button, Image, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
+import { Image, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
 import axios from 'axios';
 
 function AddProduct({ route, navigation }) {
@@ -13,7 +13,7 @@ function AddProduct({ route, navigation }) {
           <Text
             style={{
               fontSize: 25,
-              textAlign: 'bottom',
+              textAlign: 'center',
               marginBottom: 16,
             }}>
             Dodaj produkt
@@ -27,7 +27,7 @@ function AddProduct({ route, navigation }) {
             }}
             style={styles.imageStyle}
           />    
-      <TextInput
+      <TextInput secureTextInput={true} autoCorrect={false}
         placeholder="Nazwa"
     />
     </View>
@@ -40,7 +40,7 @@ function AddProduct({ route, navigation }) {
             }}
             style={styles.imageStyle}
           />
-      <TextInput
+      <TextInput secureTextInput={true} autoCorrect={false}
         placeholder="Cena"
     />
     </View>
@@ -54,7 +54,7 @@ function AddProduct({ route, navigation }) {
             }}
             style={styles.imageStyle}
           />
-    <TextInput
+    <TextInput secureTextInput={true} autoCorrect={false}
         placeholder="Opis"
     />
     </View>
@@ -66,7 +66,7 @@ function AddProduct({ route, navigation }) {
               'https://raw.githubusercontent.com/ppulut/appMobilne/26db86ea6b900aefa993be8d0eef0ac297cdbcde/icons/localisation.svg'            }}
             style={styles.imageStyle}
           />
-      <TextInput
+      <TextInput secureTextInput={true} autoCorrect={false}
         placeholder="Lokalizacja"
     />
     </View>
@@ -79,7 +79,7 @@ function AddProduct({ route, navigation }) {
             }}
             style={styles.imageStyle}
           />
-      <TextInput
+      <TextInput secureTextInput={true} autoCorrect={false}
         placeholder="Nr telefonu do kontaktu"
     />
     </View>
@@ -100,15 +100,6 @@ function AddProduct({ route, navigation }) {
 
 
 const styles = StyleSheet.create({
-  /*tlo: {
-      backgroundColor: 'rgb(247, 247, 247)',
-      fontSize: 15,
-      flex: 1, 
-      alignItems: 'center', 
-      justifyContent: 'center',
-      navbarBackgroundColor: '#2c3e50',
-      statusBarColor: '#233240'
-    },*/
 
     sectionStyle: {
       flexDirection: 'row',
@@ -126,15 +117,11 @@ const styles = StyleSheet.create({
       fontSize: 18, 
       textAlign: 'center', 
       color: 'grey',
-      mx: 6,
       borderWidth: 1,
       borderColor: 'rgb(111, 121, 247)',
       padding: 5,
       marginTop: 10,
       marginBottom: 16,
-      base: "75%",
-      md: "45%",
-      underlineColorAndroid:"transparent",
     },
 
     butony: {
@@ -159,6 +146,7 @@ const styles = StyleSheet.create({
     textStyle:{
       fontSize: 25,
       color: 'rgb(167, 219, 214)',
+      
     }
 });
 
