@@ -3,13 +3,13 @@
 
 import * as React  from 'react';
 import {Button, Image, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
+import axios from 'axios';
 
-function AddProduct({ navigation }) {
+function AddProduct({ route, navigation }) {
   return (
     <SafeAreaView style={{flex: 1}} name="AddProduct">
       <View style={styles.sectionStyle,{flex: 1, padding: 16, alignItems: 'center',
             justifyContent: 'center',}}>
-      
           <Text
             style={{
               fontSize: 25,

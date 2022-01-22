@@ -104,9 +104,6 @@ const Tab = createBottomTabNavigator();
                             color="rgb(96, 112, 128)"/>
                         ),
           }}/>
-
-
-
       </Tab.Navigator>
   
 );

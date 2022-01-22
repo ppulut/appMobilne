@@ -1,14 +1,18 @@
 // React Navigate Drawer with Bottom Tab
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
-import * as React from 'react';
+import React, { useState } from 'react';
 import {Text, Image, View, StyleSheet, TextInput, SafeAreaView, TouchableOpacity} from 'react-native';
 import HomeScreen from './HomeScreen';
 import Rejestracja from './Rejestracja';
 import { NavigationContainer } from '@react-navigation/native';
+import axios from 'axios';
 
+function Login({ navigation }) {
+    const [login, setLogin] = useState("");
+    const [password, setPassword] = useState("");
+    const [click, setClick] = useState(false);
 
-function Login({ navigation }) {       
   return (
     <SafeAreaView style={{flex: 1}} name="Login">
       <View style={styles.sectionStyle,{flex: 1, padding: 16, alignItems: 'center',
@@ -31,9 +35,9 @@ function Login({ navigation }) {
             }}
             style={styles.imageStyle}
           />    
-      <TextInput
+        <TextInput
             placeholder="Login"
-           
+            onChangeText={setLogin}  
     />
     </View>
     {/*haslo*/}
@@ -47,13 +51,40 @@ function Login({ navigation }) {
           />
       <TextInput
       secureTextEntry="true"
-        placeholder="Hasło"
+      placeholder="Hasło"
+      onChangeText={setPassword}
     />
     </View>
 
       <TouchableOpacity
-          onPress={() => navigation.navigate('Home')}  
+          disabled={click}          
           style={styles.butony}
+          onPress={
+                () => {
+                    axios.get('http://localhost:3000/users', {
+                    params: { username: login, password: password }
+                    }).then(response => {
+                        setClick(true)
+                        if (Object.keys(response.data).length == 0) {
+                            alert("Blędne haslo lub login");
+                            console.log(response.data);
+                        } else {
+                            console.log(response.data[0].id);
+                            console.log(login);
+                            navigation.navigate('Home', {
+                                userId: response.data[0].id,
+                                userlogin: response.data[0].login,
+                                userpassword: response.data[0].password,                                
+                                username: response.data[0].name,
+                                userlast_name: response.data[0].last_name,
+                                userurl: response.data[0].avatarUrl,                                
+                            });
+                        }
+                        setClick(false)
+                    }).catch(error => {
+                        console.log(error);
+                    });
+                }}
       >
         <Text style={styles.textStyle}>Zaloguj</Text>
         </TouchableOpacity>
@@ -70,7 +101,6 @@ function Login({ navigation }) {
   );
 }
 const styles = StyleSheet.create({
-
     sectionStyle: {
       flexDirection: 'row',
       justifyContent: 'center',
@@ -87,26 +117,26 @@ const styles = StyleSheet.create({
       fontSize: 18, 
       textAlign: 'center', 
       color: 'grey',
-      mx: 6,
+      //mx: 6,
       borderWidth: 1,
       borderColor: 'rgb(111, 121, 247)',
       padding: 5,
       marginTop: 10,
       marginBottom: 16,
-      base: "75%",
-      md: "45%",
-      underlineColorAndroid:"transparent",
+      //base: "75%",
+      //md: "45%",
+      //underlineColorAndroid:"transparent",
     },
 
     butony: {
-     marginTop: 12,
-     paddingVertical: 12,
-        minWidth: '25%',
-      borderRadius: 4,
-      elevation: 3,
-      backgroundColor: 'rgb(96, 112, 128)',
-        color: 'rgb(50, 168, 82)',
-        textAlign: 'center',
+    marginTop: 12,
+    paddingHorizontal: 24,
+    paddingVertical: 8,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'rgb(96, 112, 128)',
+    color: 'rgb(50, 168, 82)',
+    textAlign: 'center',
     },
 
     imageStyle: {
