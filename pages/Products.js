@@ -78,13 +78,15 @@ const styles = StyleSheet.create({
 
     butony: {
       marginTop: 12,
-      paddingVertical: 12,
-      paddingHorizontal: 32,
+      paddingHorizontal: 24,
+      paddingVertical: 8,
       borderRadius: 4,
       elevation: 3,
       backgroundColor: 'rgb(96, 112, 128)',
       color: 'rgb(50, 168, 82)',
-    },
+      textAlign: 'center',
+      borderRadius: 40
+      },
 
     imageStyle: {
       padding: 10,

@@ -9,7 +9,7 @@ function Menu() {
   const [data, setData] = useState('');
 
   const getData = async () => {
-      axios.get("http://localhost:3000/produkty")
+      axios.get("http://10.0.2.2:3000/produkty")
       .then((response) => {
         setData(response.data);
       })

@@ -101,17 +101,19 @@ function AddProduct({ route, navigation }) {
 
 const styles = StyleSheet.create({
 
-    sectionStyle: {
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#fff',
-      borderWidth: 0.5,
-      borderColor: '#000',
-      height: 40,
-      borderRadius: 5,
-      margin: 10,
-    },
+  sectionStyle: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderWidth: 0.5,
+    borderColor: '#000',
+    height: 40,
+    width: 200,
+    borderRadius: 5,
+    margin: 10,
+    paddingRight:30,
+  },
 
     inputy: {
       fontSize: 18, 
@@ -126,13 +128,15 @@ const styles = StyleSheet.create({
 
     butony: {
       marginTop: 12,
-      paddingVertical: 12,
-      paddingHorizontal: 32,
+      paddingHorizontal: 24,
+      paddingVertical: 8,
       borderRadius: 4,
       elevation: 3,
       backgroundColor: 'rgb(96, 112, 128)',
       color: 'rgb(50, 168, 82)',
-    },
+      textAlign: 'center',
+      borderRadius: 40
+      },
 
     imageStyle: {
       padding: 10,
@@ -146,7 +150,8 @@ const styles = StyleSheet.create({
     textStyle:{
       fontSize: 25,
       color: 'rgb(167, 219, 214)',
-      
+      textAlign: 'center',
+
     }
 });
 

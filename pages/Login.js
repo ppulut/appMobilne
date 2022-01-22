@@ -33,6 +33,7 @@ function Login({ navigation }) {
             style={styles.imageStyle}
           />    
         <TextInput secureTextInput={true} autoCorrect={false}
+        style={styles.textStyle}
             placeholder="Login"
             onChangeText={setLogin}  
     />
@@ -45,9 +46,9 @@ function Login({ navigation }) {
                 'https://raw.githubusercontent.com/ppulut/appMobilne/750404e5f9b569d4008cd5694a89c3ebc0c407d1/icons/password.svg',
             }}
             style={styles.imageStyle}
-          />
-      <TextInput secureTextInput={true} autoCorrect={false}
-      
+          /> 
+      <TextInput secureTextInput={true}
+      style={styles.textStyle}
       placeholder="Hasło"
       onChangeText={setPassword}
     />
@@ -58,7 +59,7 @@ function Login({ navigation }) {
           style={styles.butony}
           onPress={
                 () => {
-                    axios.get('http://localhost:3000/users', {
+                    axios.get('http://10.0.2.2:3000/users', {
                     params: { username: login, password: password }
                     }).then(response => {
                         setClick(true)
@@ -106,8 +107,10 @@ const styles = StyleSheet.create({
       borderWidth: 0.5,
       borderColor: '#000',
       height: 40,
+      width: 200,
       borderRadius: 5,
       margin: 10,
+      paddingRight:30,
     },
 
     inputy: {
@@ -130,6 +133,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(96, 112, 128)',
     color: 'rgb(50, 168, 82)',
     textAlign: 'center',
+    borderRadius: 40
     },
 
     imageStyle: {
@@ -142,9 +146,10 @@ const styles = StyleSheet.create({
     },
 
     textStyle:{
-      fontSize: 25,
+      fontSize: 20,
       color: 'rgb(167, 219, 214)',
-      
+      textAlign: 'center',
+
     }
 });
 

@@ -28,12 +28,12 @@ function Rejestracja({ navigation }) {
             return false;
         }
 
-        axios.get('http://localhost:3000/users', {
+        axios.get('http://10.0.2.2:3000/users', {
             params: { login: login, id: id}
         }).then(response => {
             if (Object.keys(response.data).length == 0) {
 
-                axios.post('http://localhost:3000/users', {
+                axios.post('http://10.0.2.2:3000/users', {
                     id: id,
                     login: login,
                     password: password,
@@ -188,7 +188,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgb(96, 112, 128)',
         color: 'rgb(50, 168, 82)',
         textAlign: 'center',
-    },
+        borderRadius: 40
+        },
 
     imageStyle: {
         padding: 10,

@@ -86,30 +86,20 @@ const Tab = createBottomTabNavigator();
                           <Image
                           source={{
                             uri:
-                            'https://github.com/ppulut/appMobilne/blob/pp/icons/home-variant.svg' 
+                            'https://raw.githubusercontent.com/ppulut/appMobilne/96a4fe027f15970e9ef1de9332e109d0f2616054/icons/produkty.svg' 
                           }}
                           style={styles.imageStyle}
                         />
                         ),
           }}/>
-        <Tab.Screen name="Ulubione" component={Favorite} options={{
-                        tabBarIcon: ({ color, size }) => (
-                          <Image
-                          source={{
-                            uri:
-                            'https://github.com/ppulut/appMobilne/blob/pp/icons/home-variant.svg' 
-                          }}
-                          style={styles.imageStyle}
-                        />
-                        ),
-          }}/>
+      
         
         <Tab.Screen name="Dodaj" component={AddProduct} options={{
                         tabBarIcon: () => (
                           <Image
                           source={{
                             uri:
-                            'https://github.com/ppulut/appMobilne/blob/pp/icons/home-variant.svg' 
+                            'https://raw.githubusercontent.com/ppulut/appMobilne/96a4fe027f15970e9ef1de9332e109d0f2616054/icons/plus-circle-outline.svg' 
                           }}
                           style={styles.imageStyle}
                         />
@@ -117,12 +107,24 @@ const Tab = createBottomTabNavigator();
           }}/>
 
 
-        <Tab.Screen name="Produkty" component={Products} options={{
+        <Tab.Screen name="Ulubione" component={Favorite} options={{
                         tabBarIcon: ({ color, size }) => (
                           <Image
                           source={{
                             uri:
-                            'https://github.com/ppulut/appMobilne/blob/pp/icons/home-variant.svg' 
+                            'https://raw.githubusercontent.com/ppulut/appMobilne/96a4fe027f15970e9ef1de9332e109d0f2616054/icons/heart-outline.svg' 
+                          }}
+                          style={styles.imageStyle}
+                        />
+                        ),
+          }}/>
+
+        <Tab.Screen name="Szukaj" component={Products} options={{
+                        tabBarIcon: ({ color, size }) => (
+                          <Image
+                          source={{
+                            uri:
+                            'https://raw.githubusercontent.com/ppulut/appMobilne/96a4fe027f15970e9ef1de9332e109d0f2616054/icons/searchin.svg' 
                           }}
                           style={styles.imageStyle}
                         />
@@ -143,13 +145,15 @@ const styles = StyleSheet.create({
 
     butony: {
       marginTop: 12,
-      paddingVertical: 12,
-      paddingHorizontal: 32,
+      paddingHorizontal: 24,
+      paddingVertical: 8,
       borderRadius: 4,
       elevation: 3,
       backgroundColor: 'rgb(96, 112, 128)',
       color: 'rgb(50, 168, 82)',
-    },
+      textAlign: 'center',
+      borderRadius: 40
+      },
 
     textStyle:{
       fontSize: 25,
