@@ -72,7 +72,8 @@ const Tab = createBottomTabNavigator();
                           <Image
                           source={{
                             uri:
-                            'https://raw.githubusercontent.com/ppulut/appMobilne/26db86ea6b900aefa993be8d0eef0ac297cdbcde/icons/localisation.svg'            }}
+                            'https://raw.githubusercontent.com/ppulut/appMobilne/80bb1791886b43a625c9f2656c520ee30fe1a7ea/icons/home-variant.svg' 
+                          }}
                           style={styles.imageStyle}
                         />
                         ),
@@ -82,29 +83,49 @@ const Tab = createBottomTabNavigator();
 
         <Tab.Screen name="Menu" component={Menu} options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon path={mdiDotsHorizontalCircleOutline} 
-                            color="rgb(96, 112, 128)"/>
+                          <Image
+                          source={{
+                            uri:
+                            'https://github.com/ppulut/appMobilne/blob/pp/icons/home-variant.svg' 
+                          }}
+                          style={styles.imageStyle}
+                        />
                         ),
           }}/>
         <Tab.Screen name="Ulubione" component={Favorite} options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon path={mdiHeartOutline } 
-                            color="rgb(96, 112, 128)"/>
+                          <Image
+                          source={{
+                            uri:
+                            'https://github.com/ppulut/appMobilne/blob/pp/icons/home-variant.svg' 
+                          }}
+                          style={styles.imageStyle}
+                        />
                         ),
           }}/>
         
         <Tab.Screen name="Dodaj" component={AddProduct} options={{
-                        tabBarIcon: ({ color, size }) => (
-                            <Icon path={mdiPlusCircleOutline} 
-                            color="rgb(96, 112, 128)"/>
+                        tabBarIcon: () => (
+                          <Image
+                          source={{
+                            uri:
+                            'https://github.com/ppulut/appMobilne/blob/pp/icons/home-variant.svg' 
+                          }}
+                          style={styles.imageStyle}
+                        />
                         ),
           }}/>
 
 
         <Tab.Screen name="Produkty" component={Products} options={{
                         tabBarIcon: ({ color, size }) => (
-                            <Icon path={mdiPackageVariant} 
-                            color="rgb(96, 112, 128)"/>
+                          <Image
+                          source={{
+                            uri:
+                            'https://github.com/ppulut/appMobilne/blob/pp/icons/home-variant.svg' 
+                          }}
+                          style={styles.imageStyle}
+                        />
                         ),
           }}/>
       </Tab.Navigator>
@@ -134,7 +155,16 @@ const styles = StyleSheet.create({
       fontSize: 25,
       color: 'rgb(167, 219, 214)',
       
-    }
+    },
+
+    imageStyle: {
+      padding: 10,
+      margin: 5,
+      height: 25,
+      width: 25,
+      resizeMode: 'stretch',
+      alignItems: 'center',
+    },
 
 });
 
