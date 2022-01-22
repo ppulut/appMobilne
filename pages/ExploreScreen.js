@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { StyleSheet, Dimensions } from 'react-native';
-import {Box,Image,Text,NativeBaseProvider,View,} from "native-base"
+import {Box,Image,Text,NativeBaseProvider,View} from "native-base"
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
 
 

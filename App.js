@@ -1,8 +1,5 @@
-import { NativeBaseProvider, Text, Box, useTheme } from 'native-base';
-import React, { Component } from 'react';
-import { BackHandler, AppRegistry } from 'react-native';
-import { Root } from 'native-base';
-import AppContainer from './pages/Login';
+
+import React, { component } from 'react';
 import Login from './pages/Login';
 import HomeScreen from './pages/HomeScreen';
 import Rejestracja from './pages/Rejestracja';

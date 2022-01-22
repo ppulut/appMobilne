@@ -14,7 +14,7 @@ function Products({ navigation }) {
           <Text
             style={{
               fontSize: 25,
-              textAlign: 'bottom',
+              textAlign: 'center',
               marginBottom: 16,
             }}>
             Szukaj produktu
@@ -28,7 +28,7 @@ function Products({ navigation }) {
             }}
             style={styles.imageStyle}
           />    
-      <TextInput
+      <TextInput secureTextInput={true} autoCorrect={false}
         placeholder="Szukaj"
     />
     </View>
@@ -51,15 +51,6 @@ function Products({ navigation }) {
 
 
 const styles = StyleSheet.create({
-  /*tlo: {
-      backgroundColor: 'rgb(247, 247, 247)',
-      fontSize: 15,
-      flex: 1, 
-      alignItems: 'center', 
-      justifyContent: 'center',
-      navbarBackgroundColor: '#2c3e50',
-      statusBarColor: '#233240'
-    },*/
 
     sectionStyle: {
       flexDirection: 'row',
@@ -77,15 +68,12 @@ const styles = StyleSheet.create({
       fontSize: 18, 
       textAlign: 'center', 
       color: 'grey',
-      mx: 6,
       borderWidth: 1,
       borderColor: 'rgb(111, 121, 247)',
       padding: 5,
       marginTop: 10,
       marginBottom: 16,
-      base: "75%",
-      md: "45%",
-      underlineColorAndroid:"transparent",
+    
     },
 
     butony: {
@@ -110,6 +98,7 @@ const styles = StyleSheet.create({
     textStyle:{
       fontSize: 25,
       color: 'rgb(167, 219, 214)',
+      
     }
 });
 

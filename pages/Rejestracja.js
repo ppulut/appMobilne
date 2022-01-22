@@ -3,9 +3,8 @@
 
 import React, { useState } from 'react';
 import { Text, Image, View, StyleSheet, TextInput, SafeAreaView, TouchableOpacity } from 'react-native';
-import HomeScreen from './HomeScreen';
-import { NavigationContainer } from '@react-navigation/native';
 import axios from 'axios';
+
 
 
 function Rejestracja({ navigation }) {
@@ -64,7 +63,7 @@ function Rejestracja({ navigation }) {
                 <Text
                     style={{
                         fontSize: 25,
-                        textAlign: 'bottom',
+                        textAlign: 'center',
                         marginBottom: 16,
                     }}>
                     Rejestracja
@@ -78,7 +77,7 @@ function Rejestracja({ navigation }) {
                         }}
                         style={styles.imageStyle}
                     />
-                    <TextInput
+                    <TextInput secureTextInput={true} autoCorrect={false}
                         placeholder="Login"
                         onChangeText={setLogin}
                     />
@@ -92,8 +91,8 @@ function Rejestracja({ navigation }) {
                         }}
                         style={styles.imageStyle}
                     />
-                    <TextInput
-                        secureTextEntry="true"
+                    <TextInput secureTextInput={true} autoCorrect={false}
+                
                         placeholder="Hasło"
                         onChangeText={setPassword}
                     />
@@ -107,8 +106,8 @@ function Rejestracja({ navigation }) {
                         }}
                         style={styles.imageStyle}
                     />
-                    <TextInput
-                        secureTextEntry="true"
+                    <TextInput secureTextInput={true} autoCorrect={false}
+                        
                         placeholder="Powtórz hasło"
                         onChangeText={setPassword2}
 
@@ -123,7 +122,7 @@ function Rejestracja({ navigation }) {
                         }}
                         style={styles.imageStyle}
                     />
-                    <TextInput
+                    <TextInput secureTextInput={true} autoCorrect={false}
                         placeholder="Imie"
                         onChangeText={setName}
                     />
@@ -137,7 +136,7 @@ function Rejestracja({ navigation }) {
                         }}
                         style={styles.imageStyle}
                     />
-                    <TextInput
+                    <TextInput secureTextInput={true} autoCorrect={false}
                         placeholder="Nazwisko"
                         onChangeText={setLast_name}
                     />
@@ -172,15 +171,12 @@ const styles = StyleSheet.create({
         fontSize: 18,
         textAlign: 'center',
         color: 'grey',
-        //mx: 6,
         borderWidth: 1,
         borderColor: 'rgb(111, 121, 247)',
         padding: 5,
         marginTop: 10,
         marginBottom: 16,
-        //base: "75%",
-        //md: "45%",
-        //underlineColorAndroid: "transparent",
+ 
     },
 
     butony: {
@@ -206,6 +202,7 @@ const styles = StyleSheet.create({
     textStyle: {
         fontSize: 25,
         color: 'rgb(167, 219, 214)',
+        
     }
 });
 

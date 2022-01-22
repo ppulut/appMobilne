@@ -5,7 +5,7 @@ import * as React  from 'react';
 import {Button, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
 
 
-function About({ navigation }) {
+function About() {
   return (
     <SafeAreaView style={{flex: 1}} name="Autorzy">
       <View style={{flex: 1, padding: 16}}>
@@ -18,7 +18,7 @@ function About({ navigation }) {
           <Text
             style={{
               fontSize: 25,
-              textAlign: 'bottom',
+              textAlign: 'center',
               marginBottom: 16,
             }}>
             Autorzy:
@@ -40,22 +40,17 @@ const styles = StyleSheet.create({
       flex: 1, 
       alignItems: 'center', 
       justifyContent: 'center',
-      navbarBackgroundColor: '#2c3e50',
-      statusBarColor: '#233240'
     },
 
     inputy: {
       fontSize: 18, 
       textAlign: 'center', 
       color: 'grey',
-      mx: 6,
       borderWidth: 1,
       borderColor: 'rgb(111, 121, 247)',
       padding: 5,
       marginTop: 10,
       marginBottom: 16,
-      base: "75%",
-      md: "45%",
     },
 
     butony: {
@@ -71,6 +66,7 @@ const styles = StyleSheet.create({
     textStyle:{
       fontSize: 25,
       color: 'rgb(167, 219, 214)',
+      
     }
 
 });
