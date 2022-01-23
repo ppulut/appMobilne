@@ -6,6 +6,7 @@
       "cena": "8000",
       "lokalizacja": "Kielce",
       "opis": "Sprzedam Reno; pali, jeździ, wszystko sprawne",
+      "telefon": "551478651",
       "Photo": "https://ocdn.eu/rankings-content-transforms/1/mlDk9ktY2FyQ2F0YWxvZ3VlLzdhZTJmNWQ2ODY5ZGE4MzJhOTNmOTk5Y2U0Y2FiYjUzkpUDAMzpzQ2zzQe0kwXNAwfNAaKCoTABoTEA"
     },
     {
@@ -14,6 +15,7 @@
       "cena": "1000",
       "lokalizacja": "Kraków",
       "opis": "Mam do sprzedania kartę graficzną Gigabyte GTX 1060 6GB ",
+      "telefon": "432654651",
       "Photo": "https://images.morele.net/i1064/974808_1_i1064.png"
     },
     {
@@ -22,6 +24,7 @@
       "cena": "4700",
       "lokalizacja": "Kielce",
       "opis": "Sprzedam rower",
+      "telefon": "787456213",
       "Photo": "https://www.dadelo.pl/photo/product/superior-xp-909-2-144549-f-sk6-w1550-h1080.png"
     },
     {
@@ -30,6 +33,7 @@
       "cena": "25",
       "lokalizacja": "Sandomierz",
       "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
+      "telefon": "321456871",
       "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
     },
     {
@@ -38,61 +42,80 @@
       "cena": "70",
       "lokalizacja": "Lublin",
       "opis": "Sprzedam używany smartband",
+      "telefon": "741258963",
       "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
     },
     {
-      "id": "0lH8atQ",
-      "nazwa": "w",
+      "id": "wXeSsJu",
+      "nazwa": "asd",
+      "cena": "ads",
+      "opis": "as",
+      "lokalizacja": "sdvsdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvsds",
+      "telefon": "d"
+    },
+    {
+      "id": "CsSpveg",
+      "nazwa": "fggf",
+      "cena": "fgfg",
+      "opis": "fggf",
+      "lokalizacja": "fggf",
+      "telefon": "fggf",
+      "Photo": null
+    },
+    {
+      "id": "kKPqqWD",
+      "nazwa": "zxc",
+      "cena": "zcx",
+      "opis": "sdf",
+      "lokalizacja": "sdf",
+      "telefon": "wef"
+    },
+    {
+      "id": "E8Zv6jt",
+      "nazwa": "xd",
+      "cena": "xd",
+      "opis": "xd",
+      "lokalizacja": "xd",
+      "telefon": "xd"
+    },
+    {
+      "id": "OKuKYIC",
+      "nazwa": "www",
       "cena": "w",
-      "lokalizacja": "w",
+      "lokalizacja": "ww",
       "opis": "w",
-      "tel": "w",
-      "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
-    },
-    {
-      "id": "Z64cpwY",
-      "nazwa": "w",
-      "cena": "w",
-      "lokalizacja": "w",
-      "opis": "w",
-      "tel": "w",
-      "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
-    },
-    {
-      "id": "GUe0SNG",
-      "nazwa": "kamer",
-      "cena": "10",
-      "lokalizacja": "kamera",
-      "opis": "kamera",
-      "tel": "kamera",
-      "Photo": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Fprojekt-8c1530f7-d5b2-490a-bcde-c7fc7e5a1801/Camera/d41791fa-c8e4-4f4d-9d6f-a1e932f3db1c.jpg"
-    },
-    {
-      "id": "XFLj46H",
-      "nazwa": "kamer",
-      "cena": "10",
-      "lokalizacja": "kamera",
-      "opis": "kamera",
-      "tel": "kamera",
-      "Photo": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Fprojekt-8c1530f7-d5b2-490a-bcde-c7fc7e5a1801/Camera/d41791fa-c8e4-4f4d-9d6f-a1e932f3db1c.jpg"
+      "tel": "ww",
+      "Photo": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Fprojekt-8c1530f7-d5b2-490a-bcde-c7fc7e5a1801/Camera/a279fa50-dae6-45e6-be23-64f4361040eb.jpg"
     }
   ],
   "users": [
     {
-      "id": "1",
-      "login": "a",
-      "password": "a",
-      "name": "Test",
-      "last_name": "Test",
-      "avatarUrl": "https://upload.wikimedia.org/wikipedia/commons/5/55/Marcin_Najman_2014.jpg"
+      "id": "85dXnsM",
+      "login": "pp",
+      "password": "pp",
+      "name": "pp",
+      "last_name": "pp"
     },
     {
-      "id": "yxelhjf",
-      "login": "d",
-      "password": "d",
-      "name": "d",
-      "last_name": "d",
-      "avatarUrl": "data:image/png;base64,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"
+      "id": "_WkPy4M",
+      "login": "zz",
+      "password": "zz",
+      "name": "zz",
+      "last_name": "zz"
+    },
+    {
+      "id": "7NwdPlf",
+      "login": "bb",
+      "password": "bb",
+      "name": "bb",
+      "last_name": "bb"
+    },
+    {
+      "id": "k77J9HB",
+      "login": "zxc",
+      "password": "zxc",
+      "name": "zxc",
+      "last_name": "zxc"
     }
   ]
 }
