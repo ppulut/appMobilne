@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { StyleSheet, FlatList } from 'react-native';
-import {Box,Image,Text,NativeBaseProvider,View} from "native-base"
-
+import {Box,Image,Text,NativeBaseProvider,View, TouchableOpacity} from "native-base"
+import { Ionicons } from "@expo/vector-icons";
 
 
 function Menu() {
@@ -15,7 +15,7 @@ function Menu() {
       })
  };
 
- useEffect(async () => getData(),[]);
+ useEffect(async () => getData(),[data]);
 
 
 
@@ -25,8 +25,9 @@ const displayDatas = ({item}) => {
     <View style={styles.boxy}>
       
      <Box>
+  
       <Text
-            fontSize = "16"
+            fontSize = "18"
             color = "rgb(111,111,111)"
             fontWeight="bold"
           > 
@@ -34,21 +35,29 @@ const displayDatas = ({item}) => {
          </Text>
 
           <Text
-            fontSize = "14"
+            fontSize = "16"
             color = "rgb(111,111,111)"
           >Cena: {item.cena}zł
           </Text>
 
           <Text
-            fontSize = "14"
+            fontSize = "16"
             color = "rgb(111,111,111)"
-            
           > 
           Lokalizacja: {item.lokalizacja}
+
+         </Text>
+         <Text
+            fontSize = "16"
+            color = "rgb(111,111,111)"
+          > 
+          Telefon: {item.telefon}
          </Text>
 
-        <Text fontWeight="400" color = "rgb(111,111,111)" >
-          {item.opis}
+        <Text fontWeight="400" color = "rgb(111,111,111)" 
+        fontSize = "16"
+        >
+          Opis: {item.opis}
         </Text>
        </Box>
 

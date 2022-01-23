@@ -2,8 +2,8 @@
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
 import * as React  from 'react';
-import {Image, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
-
+import { View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
+import { Ionicons } from "@expo/vector-icons";
 
 function Products({ navigation }) {
   return (
@@ -21,13 +21,12 @@ function Products({ navigation }) {
           </Text>
 
     <View style={styles.sectionStyle}>
-      <Image
-            source={{
-              uri:
-                'https://raw.githubusercontent.com/ppulut/appMobilne/750404e5f9b569d4008cd5694a89c3ebc0c407d1/icons/shopping-search.svg',
-            }}
-            style={styles.imageStyle}
-          />    
+    <Ionicons style={styles.imageStyle}
+                name="search-outline"
+                size={24}
+                color='rgb(96, 112, 128)'
+
+                        />
       <TextInput secureTextInput={true} autoCorrect={false}
         placeholder="Szukaj"
     />
@@ -90,14 +89,13 @@ const styles = StyleSheet.create({
       borderRadius: 40
       },
 
-    imageStyle: {
-      padding: 10,
-      margin: 5,
-      height: 25,
-      width: 25,
-      resizeMode: 'stretch',
-      alignItems: 'center',
-    },
+      imageStyle: {
+        height: 25,
+        width: 25,
+        position: 'absolute',
+        left: 10,
+  
+      },
 
     textStyle:{
       fontSize: 25,

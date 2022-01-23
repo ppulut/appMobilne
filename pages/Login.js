@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import {Text, Image, View, StyleSheet, TextInput, SafeAreaView, TouchableOpacity} from 'react-native';
 import axios from 'axios';
+import { Ionicons } from "@expo/vector-icons";
 
 function Login({ navigation }) {
     const [login, setLogin] = useState("");
@@ -25,30 +26,26 @@ function Login({ navigation }) {
           </Text>
     {/*login*/ }
     <View style={styles.sectionStyle}>
-      <Image
-            source={{
-              uri:
-                'https://raw.githubusercontent.com/ppulut/appMobilne/750404e5f9b569d4008cd5694a89c3ebc0c407d1/icons/login.svg',
-            }}
-            style={styles.imageStyle}
-          />    
+    <Ionicons style={styles.imageStyle}
+                          name="person-outline"
+                          size={24}
+                          color='rgb(96, 112, 128)'
+                        />
         <TextInput secureTextInput={true} autoCorrect={false}
-        style={styles.textStyle}
+        style={styles.textInInput}
             placeholder="Login"
             onChangeText={setLogin}  
     />
     </View>
     {/*haslo*/}
     <View style={styles.sectionStyle}>
-      <Image
-            source={{
-              uri:
-                'https://raw.githubusercontent.com/ppulut/appMobilne/750404e5f9b569d4008cd5694a89c3ebc0c407d1/icons/password.svg',
-            }}
-            style={styles.imageStyle}
-          /> 
-      <TextInput secureTextInput={true}
-      style={styles.textStyle}
+    <Ionicons style={styles.imageStyle}
+                          name="lock-closed-outline"
+                          size={24}
+                          color='rgb(96, 112, 128)'
+                        />
+      <TextInput secureTextInput={true} secureTextEntry={true}
+      style={styles.textInInput}
       placeholder="Hasło"
       onChangeText={setPassword}
     />
@@ -74,8 +71,7 @@ function Login({ navigation }) {
                                 userlogin: response.data[0].login,
                                 userpassword: response.data[0].password,                                
                                 username: response.data[0].name,
-                                userlast_name: response.data[0].last_name,
-                                userurl: response.data[0].avatarUrl,                                
+                                userlast_name: response.data[0].last_name,                             
                             });
                         }
                         setClick(false)
@@ -133,16 +129,16 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(96, 112, 128)',
     color: 'rgb(50, 168, 82)',
     textAlign: 'center',
-    borderRadius: 40
+    borderRadius: 40,
+    width:200
     },
 
     imageStyle: {
-      padding: 10,
-      margin: 5,
       height: 25,
       width: 25,
-      resizeMode: 'stretch',
-      alignItems: 'center',
+      position: 'absolute',
+      left: 10,
+
     },
 
     textStyle:{
@@ -150,7 +146,14 @@ const styles = StyleSheet.create({
       color: 'rgb(167, 219, 214)',
       textAlign: 'center',
 
-    }
+    },
+    
+    textInInput: {
+      fontSize: 15,
+      color: 'rgb(167, 219, 214)',
+      left: 17,
+      
+  }
 });
 
 export default Login;

@@ -12,6 +12,7 @@ import Products from './Products'
 import AddProduct from './AddProduct';
 import Favorite from './Favorite';
 import About from './Authors';
+import { Ionicons } from "@expo/vector-icons";
 
 
 
@@ -30,7 +31,7 @@ function Home({ navigation }) {
 
       <TouchableOpacity
             style = {styles.butony}
-            onPress={() => navigation.navigate('Menu')}
+            onPress={() => navigation.navigate('Przeglądaj')}
           >
           <Text style={styles.textStyle}>Pokaż oferty</Text>
           </TouchableOpacity>
@@ -69,27 +70,22 @@ const Tab = createBottomTabNavigator();
       <Tab.Navigator>
         <Tab.Screen  name="Home" component={HomeStack} options={{
                         tabBarIcon: () => (
-                          <Image 
-                          source={{
-                            uri:
-                            'https://raw.githubusercontent.com/ppulut/appMobilne/80bb1791886b43a625c9f2656c520ee30fe1a7ea/icons/home-variant.svg' 
-                          }}
-                          
-                          style={styles.imageStyle}
+                          <Ionicons
+                          name="home-outline"
+                          size={24}
+                          color='rgb(96, 112, 128)'
                         />
                         ),
                         
           }}
           />
 
-        <Tab.Screen name="Menu" component={Menu} options={{
+        <Tab.Screen name="Przeglądaj" component={Menu} options={{
                         tabBarIcon: ({ color, size }) => (
-                          <Image
-                          source={{
-                            uri:
-                            'https://raw.githubusercontent.com/ppulut/appMobilne/96a4fe027f15970e9ef1de9332e109d0f2616054/icons/produkty.svg' 
-                          }}
-                          style={styles.imageStyle}
+                          <Ionicons
+                          name="list-outline"
+                          size={24}
+                          color='rgb(96, 112, 128)'
                         />
                         ),
           }}/>
@@ -97,12 +93,10 @@ const Tab = createBottomTabNavigator();
         
         <Tab.Screen name="Dodaj" component={AddProduct} options={{
                         tabBarIcon: () => (
-                          <Image
-                          source={{
-                            uri:
-                            'https://raw.githubusercontent.com/ppulut/appMobilne/96a4fe027f15970e9ef1de9332e109d0f2616054/icons/plus-circle-outline.svg' 
-                          }}
-                          style={styles.imageStyle}
+                          <Ionicons
+                          name="add-circle-outline"
+                          size={24}
+                          color='rgb(96, 112, 128)'
                         />
                         ),
           }}/>
@@ -110,24 +104,20 @@ const Tab = createBottomTabNavigator();
 
         <Tab.Screen name="Ulubione" component={Favorite} options={{
                         tabBarIcon: ({ color, size }) => (
-                          <Image
-                          source={{
-                            uri:
-                            'https://raw.githubusercontent.com/ppulut/appMobilne/96a4fe027f15970e9ef1de9332e109d0f2616054/icons/heart-outline.svg' 
-                          }}
-                          style={styles.imageStyle}
+                          <Ionicons
+                          name="heart-outline"
+                          size={24}
+                          color='rgb(96, 112, 128)'
                         />
                         ),
           }}/>
 
         <Tab.Screen name="Szukaj" component={Products} options={{
                         tabBarIcon: ({ color, size }) => (
-                          <Image
-                          source={{
-                            uri:
-                            'https://raw.githubusercontent.com/ppulut/appMobilne/96a4fe027f15970e9ef1de9332e109d0f2616054/icons/searchin.svg' 
-                          }}
-                          style={styles.imageStyle}
+                          <Ionicons
+                          name="search-outline"
+                          size={24}
+                          color='rgb(96, 112, 128)'
                         />
                         ),
           }}/>
