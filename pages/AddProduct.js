@@ -14,19 +14,26 @@ export default function AddProduct() {
     const [cena, setCena] = useState("")
     const [opis, setOpis] = useState("")
     const [lokalizacja, setLokalizacja] = useState("")
-    const [tel, setTel] = useState("")
+    const [telefon, setTelefon] = useState("")
     const [image, setImage] = useState(null);
     const [hasPermission, setHasPermission] = useState(null);
     const [camera, setShowCamera] = useState(false);
 
     const add = () => {
+
+      if (!nazwa || !cena || !opis || !lokalizacja || !telefon) {
+        alert("Uzupelnij pola");
+        return false;
+    }
+
+
         axios.post('http://10.0.2.2:3000/produkty/', {
             id: id,
             nazwa: nazwa,
             cena: cena,
             lokalizacja: lokalizacja,
             opis: opis,
-            tel: tel,
+            telefon: telefon,
             Photo: image,
         }).then((response) => {
             alert("Ogloszenie zostalo dodane!")
@@ -43,7 +50,7 @@ export default function AddProduct() {
     }, []);
 
     if (hasPermission === false) {
-        return <Text>Brak uprawnieñ do kamery - nie mo¿na u¿yæ</Text>;
+        return <Text>Brak uprawnieÅ„ do kamery</Text>;
     }
     return (
     <SafeAreaView style={{flex: 1}} name="AddProduct">
@@ -125,8 +132,7 @@ export default function AddProduct() {
             style={styles.imageStyle}
           />
       <TextInput secureTextInput={true} autoCorrect={false}
-        placeholder="Nr telefonu"
-        onChangeText={setTel}
+        placeholder="Telefon" onChangeText={setTelefon}
     />
     </View>
     <TouchableOpacity
