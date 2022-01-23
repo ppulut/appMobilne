@@ -69,6 +69,15 @@
       "opis": "sdf",
       "lokalizacja": "sdf",
       "telefon": "wef"
+    },
+    {
+      "id": "E2CnjvU",
+      "nazwa": "zxc",
+      "cena": "czx",
+      "lokalizacja": "sca",
+      "opis": "sdf",
+      "tel": "234",
+      "Photo": null
     }
   ],
   "users": [
@@ -99,6 +108,17 @@
       "password": "zxc",
       "name": "zxc",
       "last_name": "zxc"
+    }
+  ],
+  "ulubione": [
+    {
+      "id": "4",
+      "nazwa": "Książka Kosiarze Neal Shusterman",
+      "cena": "25",
+      "lokalizacja": "Sandomierz",
+      "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
+      "telefon": "321456871",
+      "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
     }
   ]
 }
