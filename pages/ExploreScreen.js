@@ -15,7 +15,7 @@ function Menu() {
       })
  };
 
- useEffect(async () => getData(),[]);
+ useEffect(async () => getData(),[data]);
 
 
 
