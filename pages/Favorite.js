@@ -50,7 +50,7 @@ function AddProduct() {
             fontSize = "16"
             color = "rgb(111,111,111)"
           > 
-          Telefon: {item.telefon}
+          Telefon: {item.tel}
          </Text>
 
         <Text fontWeight="400" color = "rgb(111,111,111)" 

@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { StyleSheet, FlatList,TouchableOpacity } from 'react-native';
-import {Box,Image,Text,NativeBaseProvider,View} from "native-base"
+import { Box, Image, Text, NativeBaseProvider, View, Pressable} from "native-base"
 import { Ionicons } from "@expo/vector-icons";
 
 
 function Menu() {
+
+
+  const [id] = useState("")
+  const [nazwa] = useState("")
+  const [cena] = useState("")
+  const [opis] = useState("")
+  const [lokalizacja] = useState("")
+  const [telefon] = useState("")
+  const [Photo] = useState("");
+
+
   const [data, setData] = useState('');
 
   const getData = async () => {
@@ -18,15 +29,37 @@ function Menu() {
  useEffect(async () => getData(),[data]);
 
 
+    const favo = (item) => {
+        axios.get('http://10.0.2.2:3000/produkty', {
+        params: {id: item.id, nazwa: item.nazwa, cena: item.cena, opis:opis, lokalizacja: lokalizacja,
+                telefon: telefon, Photo: item.Photo
+                }
+  }).then(response => {
+      if (Object.keys(response.data).length == 0) {
+
+          axios.post('http://10.0.2.2:3000/ulubione', {
+            id: id,
+            nazwa: item.nazwa,
+            cena: item.cena,
+            lokalizacja: item.lokalizacja,
+            opis: item.opis,
+            tel: item.telefon,
+            Photo: item.Photo,
+          }).then(response => {
+              alert("Dodano do ulubionych")
+          })
+      } 
+  });
+};
 
 const displayDatas = ({item}) => {
 
   return(
     <View style={styles.boxy}>
-      
-     <Box>
+          
+          <Box>
      <TouchableOpacity
-                    
+                     onPress={() => favo(item)}
                     style={styles.butony}
                 >
                    <Ionicons
@@ -34,7 +67,7 @@ const displayDatas = ({item}) => {
                           size={24}
                           color='rgb(96, 112, 128)'
                         />
-                </TouchableOpacity>
+                  </TouchableOpacity>
       <Text
             fontSize = "18"
             color = "rgb(111,111,111)"
@@ -68,9 +101,7 @@ const displayDatas = ({item}) => {
         >
           Opis: {item.opis}
         </Text>
-       </Box>
-
-       <Box>
+       
           <Image
             source={{
               uri: item.Photo,
