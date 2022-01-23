@@ -1,12 +1,51 @@
 // React Navigate Drawer with Bottom Tab
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
-import * as React  from 'react';
-import {Button, Image, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { Image, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
 import axios from 'axios';
+import ExploreScreen from './ExploreScreen'
+import { Camera } from 'expo-camera';
+import CameraModule from '../configuration/CameraModule'
 
-function AddProduct({ route, navigation }) {
-  return (
+export default function AddProduct() {
+    const [id] = useState("")
+    const [nazwa, setNazwa] = useState("")
+    const [cena, setCena] = useState("")
+    const [opis, setOpis] = useState("")
+    const [lokalizacja, setLokalizacja] = useState("")
+    const [tel, setTel] = useState("")
+    const [image, setImage] = useState(null);
+    const [hasPermission, setHasPermission] = useState(null);
+    const [camera, setShowCamera] = useState(false);
+
+    const add = () => {
+        axios.post('http://10.0.2.2:3000/produkty/', {
+            id: id,
+            nazwa: nazwa,
+            cena: cena,
+            lokalizacja: lokalizacja,
+            opis: opis,
+            tel: tel,
+            Photo: image,
+        }).then((response) => {
+            alert("Ogloszenie zostalo dodane!")
+            AddProduct.getJoke();
+            ExploreScreen.getData();
+        });
+    }
+
+    useEffect(() => {
+        (async () => {
+            const { status } = await Camera.requestCameraPermissionsAsync();
+            setHasPermission(status === "granted");
+        })();
+    }, []);
+
+    if (hasPermission === false) {
+        return <Text>Brak uprawnieñ do kamery - nie mo¿na u¿yæ</Text>;
+    }
+    return (
     <SafeAreaView style={{flex: 1}} name="AddProduct">
       <View style={styles.sectionStyle,{flex: 1, padding: 16, alignItems: 'center',
             justifyContent: 'center',}}>
@@ -27,8 +66,11 @@ function AddProduct({ route, navigation }) {
             }}
             style={styles.imageStyle}
           />    
-      <TextInput
+     <TextInput
+        secureTextInput={true}
+        autoCorrect={false}
         placeholder="Nazwa"
+        onChangeText={setNazwa}
     />
     </View>
 
@@ -40,11 +82,25 @@ function AddProduct({ route, navigation }) {
             }}
             style={styles.imageStyle}
           />
-      <TextInput
+      <TextInput secureTextInput={true} autoCorrect={false}
+        onChangeText={setCena}
         placeholder="Cena"
     />
     </View>
 
+    <View style={styles.sectionStyle}>
+        <Image
+            source={{
+                uri:
+                    'https://raw.githubusercontent.com/ppulut/appMobilne/26db86ea6b900aefa993be8d0eef0ac297cdbcde/icons/localisation.svg'
+            }}
+            style={styles.imageStyle}
+        />
+        <TextInput secureTextInput={true} autoCorrect={false}
+            placeholder="Lokalizacja"
+            onChangeText={setLokalizacja}
+        />
+    </View>
 
     <View style={styles.sectionStyle}>
       <Image
@@ -54,23 +110,12 @@ function AddProduct({ route, navigation }) {
             }}
             style={styles.imageStyle}
           />
-    <TextInput
+    <TextInput secureTextInput={true} autoCorrect={false}
         placeholder="Opis"
+        onChangeText={setOpis}
     />
     </View>
-
-    <View style={styles.sectionStyle}>
-      <Image
-            source={{
-              uri:
-              'https://raw.githubusercontent.com/ppulut/appMobilne/26db86ea6b900aefa993be8d0eef0ac297cdbcde/icons/localisation.svg'            }}
-            style={styles.imageStyle}
-          />
-      <TextInput
-        placeholder="Lokalizacja"
-    />
-    </View>
-
+    
     <View style={styles.sectionStyle}>
       <Image
             source={{
@@ -79,18 +124,33 @@ function AddProduct({ route, navigation }) {
             }}
             style={styles.imageStyle}
           />
-      <TextInput
-        placeholder="Nr telefonu do kontaktu"
+      <TextInput secureTextInput={true} autoCorrect={false}
+        placeholder="Nr telefonu"
+        onChangeText={setTel}
     />
     </View>
-
     <TouchableOpacity
-          //onPress={() => navigation.navigate('Home')}  
-          style={styles.butony}
+        style={styles.butony}
+        onPress={() => {setShowCamera(true);
+        }}
+    >
+        <Text style={styles.textStyle}>Dodaj zdjecie</Text>
+    </TouchableOpacity>
+    <TouchableOpacity
+        style={styles.butony}
+        onPress={() => add()}
       >
         <Text style={styles.textStyle}>Dodaj</Text>
       </TouchableOpacity>
-        
+
+                {camera && (
+                    <CameraModule
+                        setImage={(result) => setImage(result.uri)}
+                        showModal={camera}
+                        setModalVisible={() => setShowCamera(false)}
+                    />
+                )}
+
         </View>
     
     </SafeAreaView>
@@ -161,5 +221,3 @@ const styles = StyleSheet.create({
       color: 'rgb(167, 219, 214)',
     }
 });
-
-export default AddProduct;
