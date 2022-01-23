@@ -13,8 +13,8 @@ function Menu() {
   const [cena] = useState("")
   const [opis] = useState("")
   const [lokalizacja] = useState("")
-  const [tel] = useState("")
-  const [image] = useState(null);
+  const [telefon] = useState("")
+  const [Photo] = useState("");
 
 
   const [data, setData] = useState('');
@@ -31,8 +31,8 @@ function Menu() {
 
     const favo = (item) => {
         axios.get('http://10.0.2.2:3000/produkty', {
-        params: {id: id, nazwa: item.nazwa, cena: cena, opis:opis, lokalizacja: lokalizacja,
-                telefon: telefon, Photo: image
+        params: {id: item.id, nazwa: item.nazwa, cena: item.cena, opis:opis, lokalizacja: lokalizacja,
+                telefon: telefon, Photo: item.Photo
                 }
   }).then(response => {
       if (Object.keys(response.data).length == 0) {
@@ -43,8 +43,8 @@ function Menu() {
             cena: item.cena,
             lokalizacja: item.lokalizacja,
             opis: item.opis,
-            telefon: item.telefon,
-            Photo: item.image,
+            tel: item.telefon,
+            Photo: item.Photo,
           }).then(response => {
               alert("Dodano do ulubionych")
           })
