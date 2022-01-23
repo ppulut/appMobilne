@@ -52,17 +52,19 @@ function Products({ navigation }) {
 
 const styles = StyleSheet.create({
 
-    sectionStyle: {
-      flexDirection: 'row',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#fff',
-      borderWidth: 0.5,
-      borderColor: '#000',
-      height: 40,
-      borderRadius: 5,
-      margin: 10,
-    },
+  sectionStyle: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderWidth: 0.5,
+    borderColor: '#000',
+    height: 40,
+    width: 200,
+    borderRadius: 5,
+    margin: 10,
+    paddingRight:30,
+  },
 
     inputy: {
       fontSize: 18, 

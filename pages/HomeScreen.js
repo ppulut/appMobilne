@@ -68,12 +68,13 @@ const Tab = createBottomTabNavigator();
     
       <Tab.Navigator>
         <Tab.Screen  name="Home" component={HomeStack} options={{
-                        tabBarIcon: ({ color, size }) => (
-                          <Image
+                        tabBarIcon: () => (
+                          <Image 
                           source={{
                             uri:
                             'https://raw.githubusercontent.com/ppulut/appMobilne/80bb1791886b43a625c9f2656c520ee30fe1a7ea/icons/home-variant.svg' 
                           }}
+                          
                           style={styles.imageStyle}
                         />
                         ),
@@ -168,8 +169,9 @@ const styles = StyleSheet.create({
       width: 25,
       resizeMode: 'stretch',
       alignItems: 'center',
+      
     },
-
+ 
 });
 
 export default HomeScreen;
