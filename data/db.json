@@ -44,58 +44,6 @@
       "opis": "Sprzedam używany smartband",
       "telefon": "741258963",
       "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
-    },
-    {
-      "id": "wXeSsJu",
-      "nazwa": "asd",
-      "cena": "ads",
-      "opis": "as",
-      "lokalizacja": "sdvsdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvsds",
-      "telefon": "d"
-    },
-    {
-      "id": "CsSpveg",
-      "nazwa": "fggf",
-      "cena": "fgfg",
-      "opis": "fggf",
-      "lokalizacja": "fggf",
-      "telefon": "fggf",
-      "Photo": null
-    },
-    {
-      "id": "kKPqqWD",
-      "nazwa": "zxc",
-      "cena": "zcx",
-      "opis": "sdf",
-      "lokalizacja": "sdf",
-      "telefon": "wef"
-    },
-    {
-      "id": "E2CnjvU",
-      "nazwa": "zxc",
-      "cena": "czx",
-      "lokalizacja": "sca",
-      "opis": "sdf",
-      "tel": "234",
-      "Photo": null
-    },
-    {
-      "id": "lBSnGjl",
-      "nazwa": "",
-      "cena": "",
-      "lokalizacja": "",
-      "opis": "",
-      "tel": "",
-      "Photo": null
-    },
-    {
-      "id": "yUN5fcZ",
-      "nazwa": "",
-      "cena": "",
-      "lokalizacja": "",
-      "opis": "",
-      "tel": "",
-      "Photo": null
     }
   ],
   "users": [
@@ -126,6 +74,13 @@
       "password": "zxc",
       "name": "zxc",
       "last_name": "zxc"
+    },
+    {
+      "id": "m5wyvw2",
+      "login": "f",
+      "password": "f",
+      "name": "f",
+      "last_name": "f"
     }
   ],
   "ulubione": [
@@ -137,15 +92,6 @@
       "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
       "telefon": "321456871",
       "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
-    },
-    {
-      "id": "P0lKBxf",
-      "nazwa": "",
-      "cena": "",
-      "lokalizacja": "",
-      "opis": "",
-      "tel": "",
-      "Photo": null
     }
   ]
 }
