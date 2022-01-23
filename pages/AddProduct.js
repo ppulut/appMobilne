@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { Image, View, Text, StyleSheet, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import axios from 'axios';
-import ExploreScreen from './ExploreScreen'
+import { Ionicons } from "@expo/vector-icons";
 import { Camera } from 'expo-camera';
 import CameraModule from '../configuration/CameraModule'
 
@@ -20,6 +20,13 @@ export default function AddProduct() {
     const [camera, setShowCamera] = useState(false);
 
     const add = () => {
+
+      if (!nazwa || !cena || !opis || !lokalizacja || !tel) {
+        alert("Uzupelnij pola");
+        return false;
+    }
+
+
         axios.post('http://10.0.2.2:3000/produkty/', {
             id: id,
             nazwa: nazwa,
@@ -41,7 +48,7 @@ export default function AddProduct() {
     }, []);
 
     if (hasPermission === false) {
-        return <Text>Brak uprawnieñ do kamery - nie mo¿na u¿yæ</Text>;
+        return <Text>Brak uprawnieÅ„ do kamery - nie moÅ¼na uÅ¼yÄ‡</Text>;
     }
     return (
         <SafeAreaView style={{ flex: 1 }} name="AddProduct">
@@ -59,20 +66,15 @@ export default function AddProduct() {
                 </Text>
 
                 <View style={styles.sectionStyle}>
-                    <Image
-                        source={{
-                            uri:
-                                'https://raw.githubusercontent.com/ppulut/appMobilne/3b2b9681aced2955c3e1d4823341bc9b3b4d142c/icons/name.svg',
-                        }}
-                        style={styles.imageStyle}
-                    />
-                    <TextInput
-                        secureTextInput={true}
-                        autoCorrect={false}
-                        placeholder="Nazwa"
-                        onChangeText={setNazwa}
-                    />
-                </View>
+                <Ionicons style={styles.imageStyle}
+              name="pencil-outline"
+              size={24}
+              color='rgb(96, 112, 128)'
+                        />
+      <TextInput secureTextInput={true} autoCorrect={false} 
+        placeholder="Nazwa" onChangeText={setNazwa}
+    />
+    </View>
 
                 <View style={styles.sectionStyle}>
                     <Image
@@ -88,47 +90,38 @@ export default function AddProduct() {
                     />
                 </View>
 
-                <View style={styles.sectionStyle}>
-                    <Image
-                        source={{
-                            uri:
-                                'https://raw.githubusercontent.com/ppulut/appMobilne/26db86ea6b900aefa993be8d0eef0ac297cdbcde/icons/localisation.svg'
-                        }}
-                        style={styles.imageStyle}
-                    />
-                    <TextInput secureTextInput={true} autoCorrect={false}
-                        placeholder="Lokalizacja"
-                        onChangeText={setLokalizacja}
-                    />
-                </View>
+    <View style={styles.sectionStyle}>
+    <Ionicons style={styles.imageStyle}
+              name="location-outline"
+              size={24}
+              color='rgb(96, 112, 128)'
+                        />
+      <TextInput secureTextInput={true} autoCorrect={false}
+        placeholder="Lokalizacja" onChangeText={setLokalizacja}
+    />
+    </View>
 
                 <View style={styles.sectionStyle}>
-                    <Image
-                        source={{
-                            uri:
-                                'https://raw.githubusercontent.com/ppulut/appMobilne/3b2b9681aced2955c3e1d4823341bc9b3b4d142c/icons/description.svg',
-                        }}
-                        style={styles.imageStyle}
-                    />
-                    <TextInput secureTextInput={true} autoCorrect={false}
-                        placeholder="Opis"
-                        onChangeText={setOpis}
-                    />
-                </View>
+    <Ionicons style={styles.imageStyle}
+              name="reader-outline"
+              size={24}
+              color='rgb(96, 112, 128)'
+                        />
+    <TextInput secureTextInput={true} autoCorrect={false}
+        placeholder="Opis" onChangeText={setOpis}
+    />
+    </View>
 
-                <View style={styles.sectionStyle}>
-                    <Image
-                        source={{
-                            uri:
-                                'https://raw.githubusercontent.com/ppulut/appMobilne/69f4133fa4c427223c5a3a797b33339dd07872ea/icons/phone-outline.svg',
-                        }}
-                        style={styles.imageStyle}
-                    />
-                    <TextInput secureTextInput={true} autoCorrect={false}
-                        placeholder="Nr telefonu"
-                        onChangeText={setTel}
-                    />
-                </View>
+    <View style={styles.sectionStyle}>
+    <Ionicons style={styles.imageStyle}
+              name="call-outline"
+              size={24}
+              color='rgb(96, 112, 128)'
+                        />
+      <TextInput secureTextInput={true} autoCorrect={false}
+        placeholder="Telefon" onChangeText={setTel}
+    />
+    </View>
                 <TouchableOpacity
                     style={styles.butony}
                     onPress={() => {

@@ -44,6 +44,58 @@
       "opis": "Sprzedam używany smartband",
       "telefon": "741258963",
       "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
+    },
+    {
+      "id": "wXeSsJu",
+      "nazwa": "asd",
+      "cena": "ads",
+      "opis": "as",
+      "lokalizacja": "sdvsdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvsds",
+      "telefon": "d"
+    },
+    {
+      "id": "CsSpveg",
+      "nazwa": "fggf",
+      "cena": "fgfg",
+      "opis": "fggf",
+      "lokalizacja": "fggf",
+      "telefon": "fggf",
+      "Photo": null
+    },
+    {
+      "id": "kKPqqWD",
+      "nazwa": "zxc",
+      "cena": "zcx",
+      "opis": "sdf",
+      "lokalizacja": "sdf",
+      "telefon": "wef"
+    },
+    {
+      "id": "E2CnjvU",
+      "nazwa": "zxc",
+      "cena": "czx",
+      "lokalizacja": "sca",
+      "opis": "sdf",
+      "tel": "234",
+      "Photo": null
+    },
+    {
+      "id": "lBSnGjl",
+      "nazwa": "",
+      "cena": "",
+      "lokalizacja": "",
+      "opis": "",
+      "tel": "",
+      "Photo": null
+    },
+    {
+      "id": "yUN5fcZ",
+      "nazwa": "",
+      "cena": "",
+      "lokalizacja": "",
+      "opis": "",
+      "tel": "",
+      "Photo": null
     }
   ],
   "users": [
@@ -74,13 +126,26 @@
       "password": "zxc",
       "name": "zxc",
       "last_name": "zxc"
+    }
+  ],
+  "ulubione": [
+    {
+      "id": "4",
+      "nazwa": "Książka Kosiarze Neal Shusterman",
+      "cena": "25",
+      "lokalizacja": "Sandomierz",
+      "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
+      "telefon": "321456871",
+      "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
     },
     {
-      "id": "p2UGK8I",
-      "login": "a",
-      "password": "a",
-      "name": "a",
-      "last_name": "a"
+      "id": "P0lKBxf",
+      "nazwa": "",
+      "cena": "",
+      "lokalizacja": "",
+      "opis": "",
+      "tel": "",
+      "Photo": null
     }
   ]
 }
