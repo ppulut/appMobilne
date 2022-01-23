@@ -46,56 +46,13 @@
       "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
     },
     {
-      "id": "wXeSsJu",
-      "nazwa": "asd",
-      "cena": "ads",
-      "opis": "as",
-      "lokalizacja": "sdvsdvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvsds",
-      "telefon": "d"
-    },
-    {
-      "id": "CsSpveg",
-      "nazwa": "fggf",
-      "cena": "fgfg",
-      "opis": "fggf",
-      "lokalizacja": "fggf",
-      "telefon": "fggf",
-      "Photo": null
-    },
-    {
-      "id": "kKPqqWD",
-      "nazwa": "zxc",
-      "cena": "zcx",
-      "opis": "sdf",
-      "lokalizacja": "sdf",
-      "telefon": "wef"
-    },
-    {
-      "id": "E2CnjvU",
-      "nazwa": "zxc",
-      "cena": "czx",
-      "lokalizacja": "sca",
-      "opis": "sdf",
-      "tel": "234",
-      "Photo": null
-    },
-    {
-      "id": "lBSnGjl",
-      "nazwa": "",
-      "cena": "",
-      "lokalizacja": "",
-      "opis": "",
-      "tel": "",
-      "Photo": null
-    },
-    {
-      "id": "yUN5fcZ",
-      "nazwa": "",
-      "cena": "",
-      "lokalizacja": "",
-      "opis": "",
-      "tel": "",
-      "Photo": null
+      "id": "K1370yw",
+      "nazwa": "w",
+      "cena": "w",
+      "lokalizacja": "ww",
+      "opis": "w",
+      "tel": "w",
+      "Photo": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Fprojekt-8c1530f7-d5b2-490a-bcde-c7fc7e5a1801/Camera/e5560d3b-7439-4689-a42f-6a905eae3952.jpg"
     }
   ],
   "users": [
@@ -126,6 +83,13 @@
       "password": "zxc",
       "name": "zxc",
       "last_name": "zxc"
+    },
+    {
+      "id": "_6GMpyb",
+      "login": "a",
+      "password": "a",
+      "name": "a",
+      "last_name": "a"
     }
   ],
   "ulubione": [
@@ -137,15 +101,6 @@
       "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
       "telefon": "321456871",
       "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
-    },
-    {
-      "id": "P0lKBxf",
-      "nazwa": "",
-      "cena": "",
-      "lokalizacja": "",
-      "opis": "",
-      "tel": "",
-      "Photo": null
     }
   ]
 }
