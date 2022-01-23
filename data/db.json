@@ -78,6 +78,24 @@
       "opis": "sdf",
       "tel": "234",
       "Photo": null
+    },
+    {
+      "id": "lBSnGjl",
+      "nazwa": "",
+      "cena": "",
+      "lokalizacja": "",
+      "opis": "",
+      "tel": "",
+      "Photo": null
+    },
+    {
+      "id": "yUN5fcZ",
+      "nazwa": "",
+      "cena": "",
+      "lokalizacja": "",
+      "opis": "",
+      "tel": "",
+      "Photo": null
     }
   ],
   "users": [
@@ -119,6 +137,15 @@
       "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
       "telefon": "321456871",
       "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
+    },
+    {
+      "id": "P0lKBxf",
+      "nazwa": "",
+      "cena": "",
+      "lokalizacja": "",
+      "opis": "",
+      "tel": "",
+      "Photo": null
     }
   ]
 }
