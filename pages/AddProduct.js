@@ -1,62 +1,64 @@
-import React, { useState, useEffect } from 'react';
-import { Image, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
+// React Navigate Drawer with Bottom Tab
+// https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
+
+import React, { useState } from 'react';
+import { View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
 import axios from 'axios';
-import ExploreScreen from './ExploreScreen'
-import { Camera } from 'expo-camera';
-import CameraModule from '../configuration/CameraModule'
 import { Ionicons } from "@expo/vector-icons";
 
-export default function AddProduct() {
-    const [id] = useState("")
-    const [nazwa, setNazwa] = useState("")
-    const [cena, setCena] = useState("")
-    const [opis, setOpis] = useState("")
-    const [lokalizacja, setLokalizacja] = useState("")
-    const [tel, setTel] = useState("")
-    const [image, setImage] = useState(null);
-    const [hasPermission, setHasPermission] = useState(null);
-    const [camera, setShowCamera] = useState(false);
+function AddProduct({}) {
 
-    const add = () => {
-        axios.post('http://10.0.2.2:3000/produkty/', {
-            id: id,
-            nazwa: nazwa,
-            cena: cena,
-            lokalizacja: lokalizacja,
-            opis: opis,
-            tel: tel,
-            Photo: image,
-        }).then((response) => {
-            alert("Ogloszenie zostalo dodane!")
-            AddProduct.getJoke();
-            ExploreScreen.getData();
-        });
+  const [id] = useState("");
+  const [nazwa, setNazwa] = useState("")
+  const [cena, setCena] = useState("")
+  const [opis, setOpis] = useState("")
+  const [lokalizacja, setLokalizacja] = useState("")
+  const [telefon, setTelefon] = useState("")
+
+  const add = () => {
+
+    if (!nazwa || !cena || !opis || !lokalizacja || !telefon) {
+        alert("Uzupelnij pola");
+        return false;
     }
 
-    useEffect(() => {
-        (async () => {
-            const { status } = await Camera.requestCameraPermissionsAsync();
-            setHasPermission(status === "granted");
-        })();
-    }, []);
+    axios.get('http://10.0.2.2:3000/produkty', {
+    }).then(response => {
+      
+            axios.post('http://10.0.2.2:3000/produkty', {
+                id: id,
+                nazwa: nazwa,
+                cena: cena,
+                opis: opis,
+                lokalizacja: lokalizacja,
+                telefon: telefon,
+            }).then(response => {
+                alert("Dodano produkt")
+            }).catch(error => {
+                console.log(error);
+            })
+        
+    }).catch(error => {
+        console.log(error);
+    });
+};
 
-    if (hasPermission === false) {
-        return <Text>Brak uprawnieñ do kamery - nie mo¿na u¿yæ</Text>;
-    }
-    return (
+
+
+  return (
     <SafeAreaView style={{flex: 1}} name="AddProduct">
       <View style={styles.sectionStyle,{flex: 1, padding: 16, alignItems: 'center',
             justifyContent: 'center',}}>
           <Text
             style={{
               fontSize: 25,
-              textAlign: 'bottom',
+              textAlign: 'center',
               marginBottom: 16,
             }}>
             Dodaj produkt
           </Text>
 
-          <View style={styles.sectionStyle}>
+    <View style={styles.sectionStyle}>
     <Ionicons style={styles.imageStyle}
               name="pencil-outline"
               size={24}
@@ -77,6 +79,19 @@ export default function AddProduct() {
         placeholder="Cena"  onChangeText={setCena}
     />
     </View>
+
+
+    <View style={styles.sectionStyle}>
+    <Ionicons style={styles.imageStyle}
+              name="reader-outline"
+              size={24}
+              color='rgb(96, 112, 128)'
+                        />
+    <TextInput secureTextInput={true} autoCorrect={false}
+        placeholder="Opis" onChangeText={setOpis}
+    />
+    </View>
+
     <View style={styles.sectionStyle}>
     <Ionicons style={styles.imageStyle}
               name="location-outline"
@@ -90,55 +105,28 @@ export default function AddProduct() {
 
     <View style={styles.sectionStyle}>
     <Ionicons style={styles.imageStyle}
-              name="reader-outline"
-              size={24}
-              color='rgb(96, 112, 128)'
-                        />
-    <TextInput secureTextInput={true} autoCorrect={false}
-        placeholder="Opis" onChangeText={setOpis}
-    />
-    </View>
-    
-    <View style={styles.sectionStyle}>
-    <Ionicons style={styles.imageStyle}
               name="call-outline"
               size={24}
               color='rgb(96, 112, 128)'
                         />
       <TextInput secureTextInput={true} autoCorrect={false}
-        placeholder="Telefon" onChangeText={setTel}
+        placeholder="Telefon" onChangeText={setTelefon}
     />
     </View>
-    
+
     <TouchableOpacity
-        style={styles.butony}
-        onPress={() => {setShowCamera(true);
-        }}
-    >
-        <Text style={styles.textStyle}>Dodaj zdjecie</Text>
-    </TouchableOpacity>
-    <TouchableOpacity
-        style={styles.butony}
-        onPress={() => add()}
+          onPress={add}
+          style={styles.butony}
       >
         <Text style={styles.textStyle}>Dodaj</Text>
       </TouchableOpacity>
-
-                {camera && (
-                    <CameraModule
-                        setImage={(result) => setImage(result.uri)}
-                        showModal={camera}
-                        setModalVisible={() => setShowCamera(false)}
-                    />
-                )}
-
+        
         </View>
     
     </SafeAreaView>
     
   );
 };
-
 
 
 const styles = StyleSheet.create({
