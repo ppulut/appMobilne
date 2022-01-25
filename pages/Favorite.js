@@ -1,77 +1,125 @@
-// React Navigate Drawer with Bottom Tab
-// https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
+import { View, Text,StyleSheet, FlatList} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import {Box,Image,NativeBaseProvider} from "native-base"
 
-import * as React  from 'react';
-import {Button, View, Text,StyleSheet, TextInput, TouchableOpacity, SafeAreaView} from 'react-native';
+function AddProduct() {
+
+  const [data, setData] = useState('');
+
+  const getData = async () => {
+      axios.get("http://10.0.2.2:3000/ulubione")
+      .then((response) => {
+        setData(response.data);
+      })
+ };
+
+ useEffect(async () => getData(),[data]);
 
 
-function AddProduct({ navigation }) {
-  return (
-    <SafeAreaView style={{flex: 1}} name="Ulubione">
-      <View style={{flex: 1, padding: 16}}>
-        <View
-          style={{
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+
+ const displayDatas = ({item}) => {
+
+  return(
+    <View style={styles.boxy}>
+      
+     <Box>
+  
+      <Text
+            fontSize = "18"
+            color = "rgb(111,111,111)"
+            fontWeight="bold"
+          > 
+          {item.nazwa}
+         </Text>
+
           <Text
-            style={{
-              fontSize: 25,
-              textAlign: 'bottom',
-              marginBottom: 16,
-            }}>
-            Lista ulubionych produktów
+            fontSize = "16"
+            color = "rgb(111,111,111)"
+          >Cena: {item.cena}zł
           </Text>
-        
-        
-        </View>
+
+          <Text
+            fontSize = "16"
+            color = "rgb(111,111,111)"
+          > 
+          Lokalizacja: {item.lokalizacja}
+
+         </Text>
+         <Text
+            fontSize = "16"
+            color = "rgb(111,111,111)"
+          > 
+          Telefon: {item.tel}
+         </Text>
+
+        <Text fontWeight="400" color = "rgb(111,111,111)" 
+        fontSize = "16"
+        >
+          Opis: {item.opis}
+        </Text>
+       </Box>
+
+       <Box>
+          <Image
+            source={{
+              uri: item.Photo,
+            }}
+            alt="Photo"
+            style={styles.responsiveImage}
+          />
+      </Box>
       </View>
-    </SafeAreaView>
-    
-  );
-};
+   
+  )
+}
+
+return (
+  <NativeBaseProvider>
+        <View style={styles.container}>
+          <FlatList
+              data={data}
+              renderItem={displayDatas}
+          />
+          </View>
+  </NativeBaseProvider>
+)
+}
 
 const styles = StyleSheet.create({
-  tlo: {
-      backgroundColor: 'rgb(247, 247, 247)',
-      fontSize: 15,
-      flex: 1, 
-      alignItems: 'center', 
-      justifyContent: 'center',
-      navbarBackgroundColor: '#2c3e50',
-      statusBarColor: '#233240'
-    },
 
-    inputy: {
-      fontSize: 18, 
-      textAlign: 'center', 
-      color: 'grey',
-      mx: 6,
-      borderWidth: 1,
-      borderColor: 'rgb(111, 121, 247)',
-      padding: 5,
-      marginTop: 10,
-      marginBottom: 16,
-      base: "75%",
-      md: "45%",
-    },
+  responsiveImage: {
+    width: '100%',
+    height: 'auto',
+    aspectRatio: 20/10,    
+    paddingLeft:10,
+  },
+  
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    paddingTop: 15,
+    paddingHorizontal: 15,
+    alignItems: 'center', 
+    justifyContent: 'center',
+    flexDirection: 'column',
+    
+  },
 
-    butony: {
-      marginTop: 12,
-      paddingVertical: 12,
-      paddingHorizontal: 32,
-      borderRadius: 4,
-      elevation: 3,
-      backgroundColor: 'rgb(96, 112, 128)',
-      color: 'rgb(50, 168, 82)',
-    },
+  boxy: {
+  marginRight: 40,
+  marginLeft: 40,
+  marginTop: 10,
+  paddingTop: 20,
+  paddingBottom: 20,
+  borderRadius: 10,
+  borderWidth: 1,
+  height:'auto',
+  borderColor: '#68a0cf',
+  backgroundColor: 'rgb(247,247,247)',
 
-    textStyle:{
-      fontSize: 25,
-      color: 'rgb(167, 219, 214)',
-    }
+
+  }
 
 });
-
 export default AddProduct;
