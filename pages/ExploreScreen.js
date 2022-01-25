@@ -121,6 +121,7 @@ return (
           <FlatList
               data={data}
               renderItem={displayDatas}
+              keyExtractor={(item) => item.id}
           />
           </View>
   </NativeBaseProvider>

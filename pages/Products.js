@@ -161,6 +161,7 @@ function Products() {
                   data={filteredDataSource}
                   renderItem={ItemView}
                   style={styles.flist}
+                  keyExtractor={(item) => item.id}
               />
         </View>
     
