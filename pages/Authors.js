@@ -15,15 +15,36 @@ function About() {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text
+            <Text
             style={{
               fontSize: 25,
               textAlign: 'center',
               marginBottom: 16,
             }}>
             Autorzy:
-            P.P
           </Text>
+          <Text
+            style={{
+              fontSize: 25,
+              textAlign: 'center',
+              marginBottom: 16,
+            }}>
+            Paweł Pulut</Text>
+            <Text
+            style={{
+              fontSize: 25,
+              textAlign: 'center',
+              marginBottom: 16,
+            }}>
+            Przemysław Nowakowski</Text>
+            <Text
+            style={{
+              fontSize: 25,
+              textAlign: 'center',
+              marginBottom: 16,
+            }}>
+            Krystian Ściana</Text>
+          
         
         
         </View>
