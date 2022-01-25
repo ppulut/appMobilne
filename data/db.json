@@ -53,6 +53,15 @@
       "opis": "w",
       "tel": "w",
       "Photo": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Fprojekt-8c1530f7-d5b2-490a-bcde-c7fc7e5a1801/Camera/e5560d3b-7439-4689-a42f-6a905eae3952.jpg"
+    },
+    {
+      "id": "r7eV0rD",
+      "nazwa": "za",
+      "cena": "zaz",
+      "lokalizacja": "a",
+      "opis": "za",
+      "tel": "dwd",
+      "Photo": null
     }
   ],
   "users": [
@@ -101,6 +110,24 @@
       "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
       "telefon": "321456871",
       "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
+    },
+    {
+      "id": "o6x_Wx1",
+      "nazwa": "Rower MTB Superior XP 909",
+      "cena": "4700",
+      "lokalizacja": "Kielce",
+      "opis": "Sprzedam rower",
+      "tel": "787456213",
+      "Photo": "https://www.dadelo.pl/photo/product/superior-xp-909-2-144549-f-sk6-w1550-h1080.png"
+    },
+    {
+      "id": "wd4Jfea",
+      "nazwa": "GTX 1060 6GB",
+      "cena": "1000",
+      "lokalizacja": "Kraków",
+      "opis": "Mam do sprzedania kartę graficzną Gigabyte GTX 1060 6GB ",
+      "tel": "432654651",
+      "Photo": "https://images.morele.net/i1064/974808_1_i1064.png"
     }
   ]
 }

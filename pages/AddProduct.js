@@ -76,19 +76,16 @@ export default function AddProduct() {
     />
     </View>
 
-                <View style={styles.sectionStyle}>
-                    <Image
-                        source={{
-                            uri:
-                                'https://raw.githubusercontent.com/ppulut/appMobilne/a99cdf037a5f16e3563edfe9b83b44df80ba5284/icons/money.svg',
-                        }}
-                        style={styles.imageStyle}
-                    />
-                    <TextInput secureTextInput={true} autoCorrect={false}
-                        onChangeText={setCena}
-                        placeholder="Cena"
-                    />
-                </View>
+    <View style={styles.sectionStyle}>
+    <Ionicons style={styles.imageStyle}
+              name="cash-outline"
+              size={24}
+              color='rgb(96, 112, 128)'
+                        />
+      <TextInput secureTextInput={true} autoCorrect={false}
+        placeholder="Cena"  onChangeText={setCena}
+    />
+    </View>
 
     <View style={styles.sectionStyle}>
     <Ionicons style={styles.imageStyle}
@@ -155,56 +152,56 @@ export default function AddProduct() {
 
 const styles = StyleSheet.create({
 
-    sectionStyle: {
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#fff',
-        borderWidth: 0.5,
-        borderColor: '#000',
-        height: 40,
-        width: 200,
-        borderRadius: 5,
-        margin: 10,
-        paddingRight: 30,
-    },
+  sectionStyle: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderWidth: 0.5,
+    borderColor: '#000',
+    height: 40,
+    width: 200,
+    borderRadius: 5,
+    margin: 10,
+    paddingRight:30,
+  },
 
     inputy: {
-        fontSize: 18,
-        textAlign: 'center',
-        color: 'grey',
-        borderWidth: 1,
-        borderColor: 'rgb(111, 121, 247)',
-        padding: 5,
-        marginTop: 10,
-        marginBottom: 16,
+      fontSize: 18, 
+      textAlign: 'center', 
+      color: 'grey',
+      borderWidth: 1,
+      borderColor: 'rgb(111, 121, 247)',
+      padding: 5,
+      marginTop: 10,
+      marginBottom: 16,
+      flexDirection: 'row',
     },
 
     butony: {
-        marginTop: 12,
-        paddingHorizontal: 24,
-        paddingVertical: 8,
-        borderRadius: 4,
-        elevation: 3,
-        backgroundColor: 'rgb(96, 112, 128)',
-        color: 'rgb(50, 168, 82)',
-        textAlign: 'center',
-        borderRadius: 40
-    },
+      marginTop: 12,
+      paddingHorizontal: 24,
+      paddingVertical: 8,
+      borderRadius: 4,
+      elevation: 3,
+      backgroundColor: 'rgb(96, 112, 128)',
+      color: 'rgb(50, 168, 82)',
+      textAlign: 'center',
+      borderRadius: 40
+      },
 
     imageStyle: {
-        padding: 10,
-        margin: 5,
-        height: 25,
-        width: 25,
-        resizeMode: 'stretch',
-        alignItems: 'center',
+      height: 25,
+      width: 25,
+      position: 'absolute',
+      left: 10,
+
     },
 
-    textStyle: {
-        fontSize: 25,
-        color: 'rgb(167, 219, 214)',
-        textAlign: 'center',
+    textStyle:{
+      fontSize: 25,
+      color: 'rgb(167, 219, 214)',
+      textAlign: 'center',
 
     }
 });
