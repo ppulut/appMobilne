@@ -44,6 +44,15 @@
       "opis": "Sprzedam używany smartband",
       "telefon": "741258963",
       "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
+    },
+    {
+      "id": "K1370yw",
+      "nazwa": "w",
+      "cena": "w",
+      "lokalizacja": "ww",
+      "opis": "w",
+      "tel": "w",
+      "Photo": "file:///data/user/0/host.exp.exponent/cache/ExperienceData/%2540anonymous%252Fprojekt-8c1530f7-d5b2-490a-bcde-c7fc7e5a1801/Camera/e5560d3b-7439-4689-a42f-6a905eae3952.jpg"
     }
   ],
   "users": [
@@ -76,11 +85,11 @@
       "last_name": "zxc"
     },
     {
-      "id": "m5wyvw2",
-      "login": "f",
-      "password": "f",
-      "name": "f",
-      "last_name": "f"
+      "id": "_6GMpyb",
+      "login": "a",
+      "password": "a",
+      "name": "a",
+      "last_name": "a"
     }
   ],
   "ulubione": [
@@ -92,33 +101,6 @@
       "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
       "telefon": "321456871",
       "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
-    },
-    {
-      "id": "BjqqAI_",
-      "nazwa": "Smartband",
-      "cena": "70",
-      "lokalizacja": "Lublin",
-      "opis": "Sprzedam używany smartband",
-      "tel": "741258963",
-      "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
-    },
-    {
-      "id": "ihWf7ub",
-      "nazwa": "Książka Kosiarze Neal Shusterman",
-      "cena": "25",
-      "lokalizacja": "Sandomierz",
-      "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
-      "tel": "321456871",
-      "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
-    },
-    {
-      "id": "gsI5XGp",
-      "nazwa": "Smartband",
-      "cena": "70",
-      "lokalizacja": "Lublin",
-      "opis": "Sprzedam używany smartband",
-      "tel": "741258963",
-      "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
     }
   ]
 }
