@@ -14,7 +14,7 @@ function AddProduct() {
       })
  };
 
- useEffect(async () => getData(),[data]);
+ useEffect(() => getData(),[data]);
 
 
 

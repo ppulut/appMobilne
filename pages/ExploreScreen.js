@@ -19,14 +19,14 @@ function Menu() {
 
   const [data, setData] = useState('');
 
-  const getData = async () => {
+  const getData = () => {
       axios.get("http://10.0.2.2:3000/produkty")
       .then((response) => {
         setData(response.data);
       })
  };
 
- useEffect(async () => getData(),[data]);
+ useEffect(() => getData(),[data]);
 
 
     const favo = (item) => {
