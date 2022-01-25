@@ -1,6 +1,3 @@
-// React Navigate Drawer with Bottom Tab
-// https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
-
 import * as React from 'react';
 import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import { createDrawerNavigator,  DrawerContentScrollView,
@@ -81,7 +78,7 @@ const Tab = createBottomTabNavigator();
           />
 
         <Tab.Screen name="Przeglądaj" component={Menu} options={{
-                        tabBarIcon: ({ color, size }) => (
+                        tabBarIcon: () => (
                           <Ionicons
                           name="list-outline"
                           size={24}

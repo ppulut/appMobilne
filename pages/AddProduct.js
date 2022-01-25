@@ -35,7 +35,7 @@ export default function AddProduct() {
             opis: opis,
             tel: tel,
             Photo: image,
-        }).then((response) => {
+        }).then(() => {
             alert("Ogloszenie zostalo dodane!")
         });
     }

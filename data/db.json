@@ -62,6 +62,24 @@
       "opis": "za",
       "tel": "dwd",
       "Photo": null
+    },
+    {
+      "id": "d1eGNOi",
+      "nazwa": "za",
+      "cena": "zaz",
+      "lokalizacja": "a2222",
+      "opis": "za",
+      "tel": "dwd",
+      "Photo": null
+    },
+    {
+      "id": "Bfd7UuH",
+      "nazwa": "XXX",
+      "cena": "XXX",
+      "lokalizacja": "XXX",
+      "opis": "XXX",
+      "tel": "XXXX",
+      "Photo": null
     }
   ],
   "users": [
@@ -99,6 +117,13 @@
       "password": "a",
       "name": "a",
       "last_name": "a"
+    },
+    {
+      "id": "82sTC0M",
+      "login": "asd",
+      "password": "asd",
+      "name": "asd",
+      "last_name": "asd"
     }
   ],
   "ulubione": [
@@ -128,6 +153,15 @@
       "opis": "Mam do sprzedania kartę graficzną Gigabyte GTX 1060 6GB ",
       "tel": "432654651",
       "Photo": "https://images.morele.net/i1064/974808_1_i1064.png"
+    },
+    {
+      "id": "znBl1Eh",
+      "nazwa": "Samochód Renault Clio",
+      "cena": "8000",
+      "lokalizacja": "Kielce",
+      "opis": "Sprzedam Reno; pali, jeździ, wszystko sprawne",
+      "tel": "551478651",
+      "Photo": "https://ocdn.eu/rankings-content-transforms/1/mlDk9ktY2FyQ2F0YWxvZ3VlLzdhZTJmNWQ2ODY5ZGE4MzJhOTNmOTk5Y2U0Y2FiYjUzkpUDAMzpzQ2zzQe0kwXNAwfNAaKCoTABoTEA"
     }
   ]
 }
