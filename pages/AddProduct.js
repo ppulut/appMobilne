@@ -18,7 +18,7 @@ export default function AddProduct() {
     const [image, setImage] = useState(null);
     const [hasPermission, setHasPermission] = useState(null);
     const [camera, setShowCamera] = useState(false);
-
+ 
     const add = () => {
 
       if (!nazwa || !cena || !opis || !lokalizacja || !tel) {
