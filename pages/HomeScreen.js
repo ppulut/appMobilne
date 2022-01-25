@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, View, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
 import { createDrawerNavigator,  DrawerContentScrollView,
   DrawerItemList,
   DrawerItem, } from '@react-navigation/drawer';
@@ -23,7 +23,7 @@ function Home({ navigation }) {
             textAlign: 'center',
             marginBottom: 16,
               }}>
-             Witaj !
+             Witaj, możesz teraz przeglądać ogłoszenia !
     </Text>
 
       <TouchableOpacity
@@ -100,7 +100,7 @@ const Tab = createBottomTabNavigator();
 
 
         <Tab.Screen name="Ulubione" component={Favorite} options={{
-                        tabBarIcon: ({ color, size }) => (
+                        tabBarIcon: () => (
                           <Ionicons
                           name="heart-outline"
                           size={24}

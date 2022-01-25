@@ -2,7 +2,7 @@
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
 import React, { useState, useEffect } from 'react';
-import { Image, View, Text, StyleSheet, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
+import {View, Text, StyleSheet, TextInput, TouchableOpacity, SafeAreaView } from 'react-native';
 import axios from 'axios';
 import { Ionicons } from "@expo/vector-icons";
 import { Camera } from 'expo-camera';
