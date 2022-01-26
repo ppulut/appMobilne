@@ -80,6 +80,15 @@
       "opis": "XXX",
       "tel": "XXXX",
       "Photo": null
+    },
+    {
+      "id": "daCsQJ6",
+      "nazwa": "cx",
+      "cena": "cxcx",
+      "lokalizacja": "gfgf",
+      "opis": "dynyhhy",
+      "tel": "234234",
+      "Photo": null
     }
   ],
   "users": [
@@ -124,6 +133,13 @@
       "password": "asd",
       "name": "asd",
       "last_name": "asd"
+    },
+    {
+      "id": "nnqcAYG",
+      "login": "xx",
+      "password": "xx",
+      "name": "x",
+      "last_name": "x"
     }
   ],
   "ulubione": [
@@ -135,24 +151,6 @@
       "opis": "Sprzedam używaną książkę w bardzo dobrym stanie",
       "telefon": "321456871",
       "Photo": "http://s.lubimyczytac.pl/upload/books/4696000/4696589/584210-352x500.jpg"
-    },
-    {
-      "id": "0HF8pKn",
-      "nazwa": "GTX 1060 6GB",
-      "cena": "1000",
-      "lokalizacja": "Kraków",
-      "opis": "Mam do sprzedania kartę graficzną Gigabyte GTX 1060 6GB ",
-      "tel": "432654651",
-      "Photo": "https://images.morele.net/i1064/974808_1_i1064.png"
-    },
-    {
-      "id": "ezIN1QZ",
-      "nazwa": "Smartband",
-      "cena": "70",
-      "lokalizacja": "Lublin",
-      "opis": "Sprzedam używany smartband",
-      "tel": "741258963",
-      "Photo": "https://centrumelektroniki.pl/img/p/58362.jpg?type="
     }
   ]
 }

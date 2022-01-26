@@ -7,14 +7,14 @@ function AddProduct() {
 
   const [data, setData] = useState('');
 
-  const getData = async () => {
+  const getData = () => {
       axios.get("http://10.0.2.2:3000/ulubione")
       .then((response) => {
         setData(response.data);
       })
  };
 
- useEffect(async () => getData(),[data]);
+ useEffect(() => getData(),[data]);
 
 
 
@@ -80,6 +80,7 @@ return (
           <FlatList
               data={data}
               renderItem={displayDatas}
+              keyExtractor={(item) => item.id}
           />
           </View>
   </NativeBaseProvider>

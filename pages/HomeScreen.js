@@ -1,8 +1,6 @@
 import * as React from 'react';
 import {Text, View, StyleSheet, TouchableOpacity} from 'react-native';
-import { createDrawerNavigator,  DrawerContentScrollView,
-  DrawerItemList,
-  DrawerItem, } from '@react-navigation/drawer';
+import { createDrawerNavigator,  DrawerContentScrollView,DrawerItemList,DrawerItem, } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Menu from './ExploreScreen'
 import Products from './Products'
@@ -39,7 +37,7 @@ function Home({ navigation }) {
 
 function CustomDrawerContent(props) {
   return (
-    <DrawerContentScrollView {...props}>
+    <DrawerContentScrollView>
       <DrawerItemList {...props} />
       <DrawerItem label="Kontakt z działem wsparcia" 
       onPress={() => alert('kontakt@poczta.pl')} />
@@ -51,7 +49,7 @@ function HomeStack() {
 <Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Autorzy" component={About} 
-        style= {{backgroundColor:'rgb(252, 107, 3)'}} />
+        style= {{backgroundColor:'rgb(96, 112, 128)'}} />
       </Drawer.Navigator>
   )
 }
