@@ -7,7 +7,7 @@ function AddProduct() {
 
   const [data, setData] = useState('');
 
-  const getData = async () => {
+  const getData = () => {
       axios.get("http://10.0.2.2:3000/ulubione")
       .then((response) => {
         setData(response.data);
